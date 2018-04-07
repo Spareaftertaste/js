@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%; }
+  body div div {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-color: aqua; }
+
+/*# sourceMappingURL=task1.css.map */
