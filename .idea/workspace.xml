@@ -29,8 +29,8 @@
       <file leaf-file-name="task1.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task1/scss/task1.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+            <state relative-caret-position="251">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,7 +176,7 @@
       <workItem from="1523344114414" duration="9209000" />
       <workItem from="1523407630115" duration="1807000" />
       <workItem from="1523434145331" duration="3527000" />
-      <workItem from="1523506997748" duration="10813000" />
+      <workItem from="1523506997748" duration="11086000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1523109506638</created>
@@ -206,11 +206,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523521854386</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="js task1 完成">
+      <created>1523521910713</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1523521910713</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68441000" />
+    <option name="totallyTimeSpent" value="68714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="381" y="0" width="1554" height="997" extended-state="0" />
@@ -532,8 +539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task1/scss/task1.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        <state relative-caret-position="251">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
