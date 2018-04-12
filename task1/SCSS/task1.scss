@@ -1,18 +1,43 @@
+html{
+  font-size: 100px;
+}
+body{
+  padding-bottom: .5rem;
+  font-size: 16px;
+}
 *{
   margin: 0;
   padding: 0;
 }
+button{
+  outline: none;
+}
 main{
+  padding: 3vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   div{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 100%;
-    div{
-      width: 30vw;
-      height: 30vw;
-      border-radius: 10px;
-      background-color: aqua;
-    }
+    margin: 2vw 0;
+    width: 28vw;
+    height: 28vw;
+    border-radius: 10px;
+    background-color: #ffa600;
   }
+}
+.btn{
+  padding: 0 3vw;
+}
+.game-btn{
+  margin-top: .2rem;
+  height: .5rem;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #e90;
+}
+.game-btn:hover{
+  background-color: #e90;
+}
+.game-btn:active{
+  background-color: #e90;
 }
