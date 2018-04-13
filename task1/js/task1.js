@@ -23,3 +23,8 @@ end.onclick= function() {
     }
     start.disabled= false;
 };
+
+// for (i=0;i<5;i++){
+//     i=i+1;
+//     console.log(i);
+// };
