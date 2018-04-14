@@ -1,0 +1,70 @@
+@import "../components/reset";
+@import "../base/header";
+input{
+
+}
+html{
+  background-color: #29bde0;
+}
+header{
+  @include header;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #fff 1px solid;
+}
+#headerBackBtn{
+  margin-top: .2rem;
+  display: inline-block;
+  width: .15rem;
+  height: .15rem;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+#close{
+  font-size: .3rem;
+  font-weight: bolder;
+}
+main{
+  margin-top: .4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-number{
+  position: absolute;top: 0;
+  width: .4rem;
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  font-size: .2rem;
+  border: 2px solid #fdf0cc;
+  border-radius: 50%;
+  color: #e48b97;
+  background-color: #fff;
+  z-index: 50;
+}
+.content{
+  position: relative;
+  margin-top: .2rem;
+  width: 2rem;
+  height: 3rem;
+  border: #fff 4px solid;
+  background-color: #fdf0cc;
+  img{
+    position: absolute;    top: 50%;    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+  }
+}
+.next{
+  margin-top: .2rem;
+  width: 2.2rem;
+  height: .5rem;
+  background-color: #ffa600;
+  font-size: .25rem;
+  color: #fff;
+  border: none;
+}

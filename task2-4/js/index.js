@@ -22,3 +22,6 @@ leftBtn[0].onclick= function () {
     leftBtn[0].style.display= 'none';
     rightBtn[0].style.display= 'block';
 };
+document.getElementsByClassName("start-btn")[0].onclick= function () {
+    window.location.href="player-allocation.html"
+};
