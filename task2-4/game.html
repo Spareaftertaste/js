@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="scss/pages/game.css">
+</head>
+<body>
+    <header>
+        <a class="back" href="index.html"></a>
+        <span>投票</span>
+        <a class="close" href="#"></a>
+    </header>
+    <nav>
+        <div>
+            <span>&#12288&#32发言结束请大家现在开始投票</span>
+        </div>
+        <div>
+            <audio id="music">
+                <source src="music/财富自由.mp3" type="audio/mp3">
+            </audio>
+            <a href="javascript:playMusic()"  >
+                <img class="music-btn" id="musicBtn" src="img/play.png"/>
+            </a>
+        </div>
+        <div class="nav-bottom">
+            <span class="small-triangle"></span>
+            <span>点击票数最多的人的头像</span>
+        </div>
+    </nav>
+    <section>
+        <div class="player-list">
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">1号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">2号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">警察</div>
+                    <div class="numble">3号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">法官</div>
+                    <div class="numble">4号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">狙击手</div>
+                    <div class="numble">5号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">医生</div>
+                    <div class="numble">6号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">杀手</div>
+                    <div class="numble">7号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">8号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">9号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">10号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">11号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-icon">
+                    <div class="role">水民</div>
+                    <div class="numble">12号</div>
+                </div>
+                <div class="action">
+                    <button class="action-button action-icon-1"></button>
+                    <button class="action-button action-icon-2"></button>
+                    <button class="action-button action-icon-3"></button>
+                    <button class="action-button action-icon-4"></button>
+                </div>
+            </div>
+        </div>
+        <div class="blank"></div>
+    </section>
+    <footer>
+        <a class="vote" href="gameover.html">
+            <button class="vote-butn">投死</button>
+        </a>
+    </footer>
+    <script type="text/javascript" src="js/music.js"></script>
+</body>
+</html>

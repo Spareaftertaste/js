@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58b7e48-c910-4463-8a30-802578cdb553" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/task2-4/identity-allocation.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/task2-4/js/identity-allocation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/task2-4/scss/pages/identity-allocation.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/task2-4/index.html" afterPath="$PROJECT_DIR$/task2-4/index.html" />
-      <change beforePath="$PROJECT_DIR$/task2-4/js/index.js" afterPath="$PROJECT_DIR$/task2-4/js/index.js" />
-      <change beforePath="$PROJECT_DIR$/task2-4/js/player-allocation.js" afterPath="$PROJECT_DIR$/task2-4/js/player-allocation.js" />
-      <change beforePath="$PROJECT_DIR$/task2-4/plyer-allocation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/plyer-allocation.scss" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,21 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2-4/scss/base/_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task2-4/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+            <state relative-caret-position="15">
+              <caret line="47" column="7" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="47" selection-end-column="8" />
               <folding>
                 <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -154,10 +135,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="370" />
-    <option name="y" value="60" />
+    <option name="x" value="191" />
+    <option name="y" value="76" />
     <option name="width" value="1616" />
-    <option name="height" value="883" />
+    <option name="height" value="869" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -199,20 +180,6 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="task2-4" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="task2-4" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="task2-4" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +238,7 @@
       <workItem from="1523434145331" duration="3527000" />
       <workItem from="1523506997748" duration="13362000" />
       <workItem from="1523581072682" duration="19622000" />
-      <workItem from="1523673088886" duration="20884000" />
+      <workItem from="1523673088886" duration="21036000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1523109506638</created>
@@ -322,17 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1523630979444</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="task2">
+      <created>1523713847630</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1523713847630</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111496000" />
+    <option name="totallyTimeSpent" value="111648000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="370" y="60" width="1616" height="883" extended-state="0" />
-    <editor active="true" />
+    <frame x="191" y="76" width="1616" height="869" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.293601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.293601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -361,7 +334,9 @@
     <MESSAGE value="js" />
     <MESSAGE value="js task1 完成" />
     <MESSAGE value="js task1" />
-    <option name="LAST_COMMIT_MESSAGE" value="js task1" />
+    <MESSAGE value="task2 大致差不多。。" />
+    <MESSAGE value="task2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task2-4/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        <state relative-caret-position="15">
+          <caret line="47" column="7" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="47" selection-end-column="8" />
           <folding>
             <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>

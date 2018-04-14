@@ -1,0 +1,8 @@
+@mixin arrow{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-top: #e7e7e7 3px solid;
+  border-right: #e7e7e7 3px solid;
+  transform: rotate(45deg);
+}

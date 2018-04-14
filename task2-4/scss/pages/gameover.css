@@ -1,0 +1,125 @@
+html {
+  font-size: 100px; }
+
+body {
+  font-size: .16rem; }
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none; }
+
+*:hover {
+  text-decoration: none;
+  outline: none; }
+
+header {
+  padding: 0 .2rem;
+  height: .6rem;
+  line-height: .6rem;
+  background-color: #29bde0;
+  color: #f3f4f5;
+  font-size: .2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.home_btn {
+  background: url("../../img/home.png") no-repeat;
+  background-size: .3rem .3rem;
+  width: .3rem;
+  height: .3rem; }
+
+.help_btn {
+  background: url("../../img/gameover_header_help.png") no-repeat;
+  background-size: .3rem .3rem;
+  width: .3rem;
+  height: .3rem; }
+
+section {
+  margin-top: .6rem;
+  padding: .1rem .45rem;
+  background-color: #29bde0; }
+
+.gameover {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1.44rem;
+  max-height: .75rem;
+  margin-top: .4rem; }
+
+.praise {
+  color: #ffc865;
+  font-size: .2rem; }
+
+.detailed {
+  margin-top: .1rem;
+  color: #fff; }
+
+.content {
+  padding: .05rem .45rem;
+  color: black;
+  font-size: .15rem;
+  border-bottom: 2px #ddd solid; }
+
+.gaming_time {
+  font-size: .15rem;
+  color: #d6d6d6; }
+
+.gaming {
+  color: #d6d6d6; }
+
+.blank {
+  height: .8rem; }
+
+.night {
+  padding-bottom: .1rem;
+  display: flex;
+  justify-content: space-between; }
+
+footer {
+  width: 100%;
+  height: .8rem;
+  background-color: #29bde0;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(153, 223, 240, 0.8); }
+
+button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px; }
+
+.again {
+  margin-right: .13rem;
+  width: 42vw;
+  height: .48rem;
+  color: #fff; }
+  .again button {
+    background-color: #f66f6f; }
+
+.share {
+  margin-left: .13rem;
+  width: 40vw;
+  height: .48rem;
+  color: #fff; }
+  .share button {
+    background-color: #fbb435; }
+
+/*# sourceMappingURL=gameover.css.map */

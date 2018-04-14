@@ -1,0 +1,150 @@
+@import "../base/header";
+@import "../base/nav";
+@import "../base/section";
+@import "../base/footer";
+@import "../components/reset";
+@import "../components/musicPlayer";
+body{
+  background-color: #29bde0;
+}
+header{
+  @include header;
+  position: fixed;top: 0;left: 0;right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.back{
+  display: inline-block;
+  background: url("../../img/select.png") no-repeat;
+  background-size: .3rem .3rem;
+  width: .3rem;
+  height: .3rem;
+}
+.close{
+  display: inline-block;
+  background: url("../../img/close.png") no-repeat;
+  background-size: .3rem .3rem;
+  width: .3rem;
+  height: .3rem;
+}
+//以上是头部样式
+nav{
+  @include nav;
+}
+.small-triangle{
+  position: absolute;top: 0;left: .2rem;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: .05rem solid transparent;
+  border-top: .1rem solid #b9e9f5;
+}
+.nav-bottom{
+  padding-left: .2rem;
+  position: relative;
+  height: .4rem;
+  background-color: #29bde0;
+  font-size: .115rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+//以上是导航栏样式
+section{
+  width: 100%;
+  margin-top: 1.6rem;
+  background-color: #29bde0;
+}
+.player-list{
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: .1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.player{
+  margin: .2rem;
+  width: 20vw;
+  height: 30vw;
+  float: left;
+}
+.player-icon{
+  width: 20vw;
+  height: 20vw;
+  border: 3px #fff solid;
+}
+.role{
+  box-sizing: border-box;
+  padding-top: 20%;
+  width: 100%;
+  height: 85%;
+  background-color: #f5c97b;
+  color: #565656;
+  font-size: 5vw;
+  text-align: center;
+}
+.numble {
+  width: 100%;
+  height: 15%;
+  font-size: 2.5vw;
+  color: #fff;
+  background-color: #83b09a;
+  text-align: center;
+}
+.action{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+  height: 10vw;
+  visibility: hidden;
+}
+/*将下方按钮隐藏*/
+.player:hover .action{
+  visibility: visible;
+}
+/*当鼠标划过时下方按钮出现*/
+.action-button{
+  background: url("../../img/small-icons.png") no-repeat;
+  background-size: 8vw 8vw;
+  border: none;
+  width: 4vw;
+  height: 4vw;
+}
+.action-icon-1{
+  background-position: -4vw -4vw;
+}
+.action-icon-2{
+  background-position: 0 0;
+}
+.action-icon-3{
+  background-position: 0 -4vw;
+}
+.action-icon-4{
+  background-position: -4vw 0;
+}
+.blank{
+  width: 100%;
+  height: .8rem;
+}
+//以上是中间内容
+footer{
+  position: fixed;bottom: 0;left: 0;right: 0;
+  @include footer;
+}
+.vote{
+  display: inline-block;
+  margin-top: .15rem;
+  width: 65%;
+  height: 70%;
+  background-color: #fbb435;
+}
+.vote-butn{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: .2rem;
+}

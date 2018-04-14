@@ -1,0 +1,100 @@
+@import "../base/header";
+@import "../base/nav";
+@import "../base/section";
+@import "../base/footer";
+@import "../components/side-nav";
+@import "../components/reset";
+@import "../components/arrow";
+@import "../components/triangle";
+@import "../components/circle";
+html{
+  background-color: #f0f0f0;
+}
+header{
+  @include header;
+  margin-bottom: .3rem;
+}
+a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+section{
+  width: 100%;
+  background-color: #f0f0f0;
+  transition: transform 400ms ease;
+}
+.section-content{
+  position: relative;
+  padding: .1rem  .2rem;
+  text-align: center;
+  font-weight: bolder;
+}
+.recent-game{
+  width: 100%;
+  position: relative;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  font-size: .18rem;
+  color: #9a9a9a;
+  background-color: #fff;
+  border: #c9c9c9 1px solid;
+  display: block;
+}
+.arrow {
+  position: absolute ;
+  right: .1rem;
+  top: .17rem;
+  @include arrow;
+}
+.article-title{
+  margin-top: .15rem;
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .18rem;
+  border: 1px #c9c9c9 solid;
+  border-bottom: #fdd793 2px solid;
+  background-color: #fff;
+  color: #fbb435;
+}
+.ariticle{
+  position: relative;
+  padding: 0 .4rem;
+  color: #787878;
+  border: 1px #c9c9c9 solid;
+  border-top: none;
+  background-color: #fff;
+}
+.start-btn{
+  margin: .15rem 0;
+  background-color: #69d1e9;
+  color: #fff;
+  border: none;
+  height: .8rem;
+  line-height: .8rem;
+}
+.circle-list{
+  margin: .08rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.circle{
+  @include circle;
+}
+.circle-active{
+  @include circle;
+  background-color: #69d1e9;
+}
+.triangle{
+
+  @include triangle;
+}
+.triangle-left{
+  position: absolute;top: 39%;left: -.1rem;
+  transform: rotate(180deg);
+}
+.triangle-right{
+  position: absolute;top: 39%;right: -.1rem;
+}
