@@ -1,22 +1,22 @@
 @import "../components/reset";
 @import "../base/header";
-input{
 
-}
 html{
   background-color: #f0f0f0;
 }
 header{
   @include header;
-  span{
-    margin-top: .15rem;
-    display: inline-block;
-    width: .15rem;
-    height: .15rem;
-    border-top: 3px solid #fff;
-    border-left: 3px solid #fff;
-    transform: rotate(-45deg);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerBackBtn{
+  display: inline-block;
+  width: .15rem;
+  height: .15rem;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg);
 }
 main{
   padding: 0 .05rem .05rem .05rem;
@@ -26,24 +26,29 @@ main{
     background-color: #fff;
     margin-top: .03rem;
   }
+
+}
+.main-title{
+  padding: 0.1rem;
+  height: 2.4rem;
+  width: .2rem;
+  line-height: .4rem;
+  font-size: .2rem;
+  border-right: #999 solid ;
+}
+.main-content{
+  flex-grow: 1;
   button{
-    margin-top: .05rem;
-    display: block;
     width: 100%;
-    height: .35rem;
-    font-size: .22rem;
-    color: #fff;
-    background-color: #ffa600;
+    height: .32rem;
+    background-color: #fff;
+    color: #29bde0;
     border: none;
   }
 }
-.main-title{
-  height: .4rem;
-  line-height: .4rem;
-}
 .player-box{
-
-  height: 1.2rem;
+  height: 2rem;
+  border-bottom: #999 solid;
 }
 .key-word{
   height: .8rem;
@@ -51,7 +56,7 @@ main{
 .player-number{
   padding: .1rem;
   text-align: left;
-  height: .8rem;
+  height: .6rem;
   font-size: .13rem;
   font-weight: bolder;
   span{
@@ -61,16 +66,31 @@ main{
     text-align: left;
   }
 }
+.flex{
+  display: flex;
+}
+.key-word{
+  padding:0  .2rem .2rem .2rem;
+}
+.player-target{
+  width: 100%;
+  height: .4rem;
+  font-size: .18rem;
+  border: none;
+  border-bottom: #999 solid;
+}
+.player-target::-webkit-input-placeholder {
+
+  font-size: .12rem;
+}
 .player-number-input{
-  width: .4rem;
+  padding: 0 .05rem;
+  width: .3rem;
   color: #ffa600;
-  background-color: #fff;
+  background-color: #f0f0f0;
   border: none;
 }
-.player-number-input:hover{
-  background-color: #f0f0f0;
-}
-input::-webkit-input-placeholder {
+.player-number-input::-webkit-input-placeholder {
   color: #aab2bd;
   font-size: .08rem;
 }
@@ -81,16 +101,62 @@ input::-webkit-input-placeholder {
   font-size: .12rem;
 }
 .killer{
-  padding-left: .3rem;
-  margin-right: .2rem;
-  width: .6rem;
-  height: .3rem;
-  line-height: .3rem;
+  padding-left: .5rem;
+  margin-right: .4rem;
+  width: .8rem;
+  height: .4rem;
+  line-height: .4rem;
   background: url("../../img/mario.png") center left no-repeat;
-  background-size: .3rem .3rem;
+  background-size: .4rem .4rem;
+  font-size: .16rem;
 }
 .civilian{
   @extend .killer;
   background: url("../../img/yoshi.png") center left no-repeat;
-  background-size: .3rem .3rem;
+  background-size: .4rem .4rem;
 }
+#licensing{
+  margin-top: .05rem;
+  display: block;
+  width: 100%;
+  height: .35rem;
+  font-size: .22rem;
+  color: #fff;
+  background-color: #ffa600;
+  border: none;
+}
+.range-input{
+  display: flex;
+  justify-content: space-between;
+  div{
+    margin: 0 .1rem;
+    width: .2rem;
+    height: .2rem;
+    line-height: .2rem;
+    text-align: center;
+    border: #999 solid;
+    font-size: .15rem;
+    color: #ffa600;
+  }
+  label{
+    flex-grow: 1;
+  }
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  //-webkit-appearance: none;
+  margin-top: -.07rem;
+  height: .2rem;
+  width: .1rem;
+  background: #ffa600;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  margin-top: .1rem;
+  height: .05rem;
+  background-color: #ffa600;
+
+}
+

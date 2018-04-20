@@ -9,19 +9,38 @@
 <body>
 <header>
     <span id="headerBackBtn"></span>
+    <span>参数设置</span>
+    <span></span>
 </header>
 <main>
-    <div class="main-title">玩家配比</div>
-    <div class="player-box">
-        <div class="killer">杀手：<span id="killer"></span></div>
-        <div class="civilian">平民：<span id="civilian"></span></div>
+    <div class="flex">
+        <div class="main-title">玩家配比</div>
+        <div class="main-content">
+            <div class="player-box">
+                <div class="killer">杀手：<span id="killer"></span></div>
+                <div class="civilian">平民：<span id="civilian"></span></div>
+            </div>
+            <button id="setNumber">点击设置&#9784</button>
+        </div>
     </div>
-    <div class="key-word"></div>
+    <div class="key-word">
+        <label>
+            <input class="player-target"  id="killerTarget" type="text" placeholder="杀手词组">
+        </label>
+        <label>
+            <input class="player-target"  id="civilianTarget" type="text" placeholder="平民词组">
+        </label>
+    </div>
     <div class="player-number">
         请输入玩家数量:
         <label for="playerNumber"></label>
         <input class="player-number-input"  id="playerNumber" type="number" value="8">
         <span>(数量为4-18)</span>
+        <div class="range-input">
+            <div id="reduce">-</div>
+            <label for="range"><input id="range" type="range" max="18" min="4" value="8" step="1"></label>
+            <div id="add">+</div>
+        </div>
     </div>
     <button id="licensing">去发牌</button>
 </main>

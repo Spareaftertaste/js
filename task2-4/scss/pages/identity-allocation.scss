@@ -48,15 +48,22 @@ main{
 .content{
   position: relative;
   margin-top: .2rem;
+  padding-top: .5rem;
   width: 2rem;
-  height: 3rem;
+  height: 2.5rem;
   border: #fff 4px solid;
   background-color: #fdf0cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img{
-    position: absolute;    top: 50%;    left: 50%;
-    transform: translate(-50%, -50%);
     max-width: 1.5rem;
     max-height: 1.5rem;
+  }
+  div{
+    padding-top: .2rem;
+    color: #29bde0;
+    font-size: .2rem;
   }
 }
 .next{
@@ -67,4 +74,7 @@ main{
   font-size: .25rem;
   color: #fff;
   border: none;
+}
+#hide{
+  visibility: hidden;
 }

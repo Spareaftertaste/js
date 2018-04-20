@@ -1,22 +1,38 @@
-var headerBackBtn= document.getElementById("headerBackBtn");
-var licensing=document.getElementById('licensing');
-headerBackBtn.onclick =function () {
+var playerNumber= document.getElementById('playerNumber');
+var range=document.getElementById('range');
+document.getElementById("headerBackBtn").onclick =function () {
     window.location.href='index.html';
 };
-licensing.onclick =function (){
-    window.location.href='identity-allocation.html';
+document.getElementById('licensing').onclick =function (){
+    if(parseInt(document.getElementById('killer').innerHTML)===parseInt(playerNumber.value/4)){
+        sessionStorage.setItem("killer",parseInt(playerNumber.value/4));
+        sessionStorage.setItem("civilian",playerNumber.value-parseInt(playerNumber.value/4));
+        window.location.href='identity-allocation.html';
+    }
+    else {
+        alert("请设置玩家人数后再开始游戏");
+    }
 };
-function number() {
+document.getElementById('setNumber').onclick= function number() {
     var playerNumber= document.getElementById('playerNumber').value;
     document.getElementById('killer').innerHTML=parseInt(playerNumber/4);
     document.getElementById('civilian').innerHTML=playerNumber-parseInt(playerNumber/4);
-    if(playerNumber<3 || playerNumber>18)
-    {
-        alert('请输入正确的玩家数');
-        clearInterval(checkNumber);
-        setTimeout(window.onload,3000);
+};
+playerNumber.oninput=function () {
+    if(playerNumber.value>=4 &&playerNumber.value<=18){
+        range.value = playerNumber.value;
+    }else {
+        alert("请输入4-18的玩家数");
     }
-}
-window.onload=function () {
-    checkNumber= setInterval(number,500);
+};
+range.oninput=function () {
+    playerNumber.value=range.value;
+};
+document.getElementById('add').onclick= function () {
+    ++range.value;
+    playerNumber.value=range.value;
+};
+document.getElementById('reduce').onclick= function () {
+    --range.value;
+    playerNumber.value=range.value;
 };
