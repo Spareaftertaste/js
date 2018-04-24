@@ -1,0 +1,111 @@
+@import "../components/reset";
+@import "../base/header";
+@import "../base/footer";
+html{
+  background-color: #f0f0f0;
+}
+.flex-coluom{
+  display: flex;
+  flex-direction: column;
+}
+.flex{
+  position: relative;
+  display: flex;
+}
+header{
+  @include header;
+  justify-content: space-between;
+  border-bottom: #fff 1px solid;
+}
+#headerBackBtn{
+  margin-top: .2rem;
+  display: inline-block;
+  width: .15rem;
+  height: .15rem;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+#close{
+  font-size: .3rem;
+  font-weight: bolder;
+}
+section{
+  margin: .1rem .1rem;
+  background-color: #fff;
+  text-align: center;
+  border: #999 solid;
+  h3{
+    border-bottom: #999 solid;
+    height: .4rem;
+    line-height: .4rem;
+    color: #29bde0;
+  }
+}
+.content-left{
+  padding-top: .2rem;
+  width: .5rem;
+  border-right: #999 solid;
+}
+.content-right{
+  padding-top: .2rem;
+  padding-left: .3rem;
+  flex-grow: 1;
+}
+.moon{
+  position: absolute;left: -.5rem;top: .1rem;bottom: 0;
+  width: .3rem;
+  height: .3rem;
+  border: #999 solid;
+  border-radius: 50%;
+  background: url("../../img/moon.png") no-repeat center center #fff;
+  background-size: .2rem .2rem;
+  z-index: 20;
+}
+.sun{
+  @extend .moon;
+  background: url("../../img/sun.png") no-repeat center center #fff;
+  background-size: .2rem .2rem;
+}
+.game-content{
+  margin: 0 .1rem;
+}
+.step{
+  position: relative;
+  margin: .1rem;
+  height: .4rem;
+  line-height: .4rem;
+  color: #fff;
+  background-color: #29bde0;
+  flex-grow: 1;
+}
+.triangle{
+  position: absolute;left: -.05rem;top: .1rem;
+  width: .15rem;
+  height: .15rem;
+  background-color: #29bde0;
+  transform: rotate(45deg);
+}
+footer{
+  position: fixed;bottom: 0;left: 0;right: 0;
+  @include footer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #94deef;
+  button{
+    margin: .2rem .2rem;
+    width: 40%;
+    background-color: #ffa600;
+    border-radius: 5px;
+    border: none;
+  }
+}
+//.content{
+//  transition:visibility 500ms ease;
+//}
+//h3:hover .content{
+//  visibility: hidden;
+//}
+.blank{
+  height: .8rem;
+}

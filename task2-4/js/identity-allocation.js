@@ -38,6 +38,7 @@ function creatarr(arr) {
 }//建立玩家数组
 var player= creatarr(arr);//创建玩家数
 shuffle(player);//打乱玩家
+
 function identity() {
     var yahah = [];
     for (var i = 0; i < arr.length; i++) {
@@ -50,6 +51,8 @@ function identity() {
     return yahah
 }
 var shufflePlayer= identity();//给玩家赋予身份
+sessionStorage.setItem('player',player);
+sessionStorage.setItem('playerIdentity',shufflePlayer);
 console.log(player);
 console.log(shufflePlayer);
 function search(arr,dst){
@@ -103,7 +106,7 @@ function abb() {
     }
     if (w>(player.length*2-1)){
         if (confirm("请把手机交给法官")){
-            window.location.href='game.html';
+            window.location.href='judge-diary.html';
         }
     }
 }

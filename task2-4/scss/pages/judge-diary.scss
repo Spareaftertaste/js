@@ -1,55 +1,29 @@
-@import "../base/header";
-@import "../base/nav";
-@import "../base/section";
-@import "../base/footer";
 @import "../components/reset";
-@import "../components/musicPlayer";
-body{
+@import "../base/header";
+@import "../base/footer";
+html{
   background-color: #29bde0;
 }
 header{
   @include header;
-  position: fixed;top: 0;left: 0;right: 0;
+  margin-bottom: .2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border-bottom: #fff 1px solid;
 }
-.back{
+#headerBackBtn{
+  margin-top: .2rem;
   display: inline-block;
-  background: url("../../img/select.png") no-repeat;
-  background-size: .3rem .3rem;
-  width: .3rem;
-  height: .3rem;
+  width: .15rem;
+  height: .15rem;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg);
 }
-.close{
-  display: inline-block;
-  background: url("../../img/close.png") no-repeat;
-  background-size: .3rem .3rem;
-  width: .3rem;
-  height: .3rem;
+#close{
+  font-size: .3rem;
+  font-weight: bolder;
 }
-//以上是头部样式
-nav{
-  @include nav;
-}
-.small-triangle{
-  position: absolute;top: 0;left: .2rem;
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  border: .05rem solid transparent;
-  border-top: .1rem solid #b9e9f5;
-}
-.nav-bottom{
-  padding-left: .2rem;
-  position: relative;
-  height: .4rem;
-  background-color: #29bde0;
-  font-size: .115rem;
-  letter-spacing: 2px;
-  color: #fff;
-}
-//以上是导航栏样式
 main{
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +57,6 @@ main{
 .blank{
   height: .8rem;
 }
-//以上是中间内容
 footer{
   position: fixed;bottom: 0;left: 0;right: 0;
   @include footer;

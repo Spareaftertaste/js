@@ -14,15 +14,7 @@ body {
   text-decoration: none;
   outline: none; }
 
-.music-btn {
-  position: absolute;
-  top: .14rem;
-  right: .15rem;
-  width: .35rem;
-  height: .35rem;
-  border: none; }
-
-body {
+html {
   background-color: #29bde0; }
 
 header {
@@ -32,55 +24,23 @@ header {
   background-color: #29bde0;
   color: #f3f4f5;
   font-size: .2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-bottom: .2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  border-bottom: #fff 1px solid; }
 
-.back {
+#headerBackBtn {
+  margin-top: .2rem;
   display: inline-block;
-  background: url("../../img/select.png") no-repeat;
-  background-size: .3rem .3rem;
-  width: .3rem;
-  height: .3rem; }
+  width: .15rem;
+  height: .15rem;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg); }
 
-.close {
-  display: inline-block;
-  background: url("../../img/close.png") no-repeat;
-  background-size: .3rem .3rem;
-  width: .3rem;
-  height: .3rem; }
-
-nav {
-  position: fixed;
-  top: .6rem;
-  left: 0;
-  right: 0;
-  height: .6rem;
-  line-height: .6rem;
-  background-color: #b9e9f5; }
-
-.small-triangle {
-  position: absolute;
-  top: 0;
-  left: .2rem;
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  border: .05rem solid transparent;
-  border-top: .1rem solid #b9e9f5; }
-
-.nav-bottom {
-  padding-left: .2rem;
-  position: relative;
-  height: .4rem;
-  background-color: #29bde0;
-  font-size: .115rem;
-  letter-spacing: 2px;
-  color: #fff; }
+#close {
+  font-size: .3rem;
+  font-weight: bolder; }
 
 main {
   display: flex;
@@ -141,4 +101,4 @@ footer {
   color: #fff;
   font-size: .2rem; }
 
-/*# sourceMappingURL=game.css.map */
+/*# sourceMappingURL=judge-diary.css.map */

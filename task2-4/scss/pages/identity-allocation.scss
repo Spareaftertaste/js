@@ -1,13 +1,11 @@
 @import "../components/reset";
 @import "../base/header";
-input{
-
-}
 html{
   background-color: #29bde0;
 }
 header{
   @include header;
+
   display: flex;
   justify-content: space-between;
   border-bottom: #fff 1px solid;
