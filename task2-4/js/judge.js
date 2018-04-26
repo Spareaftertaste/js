@@ -6,14 +6,13 @@ var player= sessionStorage.getItem('player'),
     day=$('h3'),
     gameOver=$('#gameOver'),
     diary=$('#diary');
-
-headerBackBtn.click(function(){
-    window.location.href='judge-diary.html';
-});
 close.click(function(){
     if (confirm("您确定要退出游戏吗？")) {
         window.location.href = 'index.html';
     }
+});
+headerBackBtn.click(function(){
+    window.location.href='judge-diary.html';
 });
 gameOver.click(function(){
     if (confirm("您确定要结束本轮游戏吗？")) {
@@ -23,29 +22,32 @@ gameOver.click(function(){
 diary.click(function(){
     window.location.href='judge-diary.html';
 });
-// var menu = {
-//     // 当前状态
-//     initial: 'hide',
-//     // 绑定事件
-//     initialize: function() {
-//         // var self = this;
-//         day.on("hover", content.transition);
-//     },
-//     // 状态转换
-//     transition: function(event){
-//         switch(this.currentState) {
-//             case "hide":
-//                 this.currentState = 'show';
-//                 content.show();
-//                 break;
-//             case "show":
-//                 this.currentState = 'hide';
-//                 content.hide();
-//                 break;
-//             default:
-//                 console.log('Invalid State!');
-//                 break;
-//         }
-//     }
-//
-// };
+//定义一个有限状态机
+var switchMenu={
+    state:"off",//当前状态
+    trans:function(){//状态和状态变化规则 //包含了动作
+        switch (this.state){
+            case "off":
+                this.state="on";
+                content.hide();
+                day.css("border","none");
+                break;
+            case "on":
+                this.state="off";
+                content.show();
+                day.css("border-bottom","#999 solid");
+                break;
+            default:
+                // this.state="off";
+                // content.hide();
+                // day.css("border","none");
+        }
+
+    },
+    //事件，不同的事件对应不同的规则
+    event:function(){this.trans();console.log(switchMenu)}
+};
+day.on("click",function(){switchMenu.event()});//给按钮添加点击事件 //控制菜单的折叠
+$(".step").click(function () {
+    window.location.href='game.html';
+});

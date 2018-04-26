@@ -4,10 +4,6 @@ var player= sessionStorage.getItem('player'),
     close=$('#close'),
     playerBox= document.querySelectorAll('.player'),
     start= $("#start");
-
-$('.step').click(function(){
-    window.location.href = 'game.html';
-});
 headerBackBtn.click(function(){
     if (confirm("您确定要返回上一步吗，返回上一部将导致玩家身份重新分配")) {
         window.location.href='.html';

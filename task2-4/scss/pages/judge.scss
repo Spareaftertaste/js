@@ -100,9 +100,9 @@ footer{
     border: none;
   }
 }
-//.content{
-//  transition:visibility 500ms ease;
-//}
+.content{
+  transition:width 500ms ease;
+}
 //h3:hover .content{
 //  visibility: hidden;
 //}

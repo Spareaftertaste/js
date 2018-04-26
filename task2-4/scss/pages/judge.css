@@ -127,6 +127,9 @@ footer {
     border-radius: 5px;
     border: none; }
 
+.content {
+  transition: width 500ms ease; }
+
 .blank {
   height: .8rem; }
 

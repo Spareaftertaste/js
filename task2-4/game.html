@@ -14,97 +14,94 @@
 </head>
 <body>
     <header>
-        <a class="back" href="index.html"></a>
-        <span>投票</span>
-        <a class="close" href="#"></a>
+        <span></span>
+        <span id="headTitle">杀手杀人</span>
+        <span id="close">&#10005</span>
     </header>
     <nav>
         <div>
-            <span>&#12288&#32发言结束请大家现在开始投票</span>
+            <span>&#12288&#32
+                <span id="navTitle">杀手请睁眼，杀手请选择要杀的对象</span>
+            </span>
         </div>
         <div>
-            <audio id="music">
-                <source src="music/财富自由.mp3" type="audio/mp3">
-            </audio>
-            <a href="javascript:playMusic()"  >
-                <img class="music-btn" id="musicBtn" src="img/play.png"/>
-            </a>
+
         </div>
         <div class="nav-bottom">
             <span class="small-triangle"></span>
-            <span>点击票数最多的人的头像</span>
+            <span id="mainTitle">点击下方玩家头像对被杀玩家进行标记</span>
         </div>
     </nav>
     <main>
-        <div class="player">
+        <div class="player" id="1">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="2">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="3">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="4">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="5">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="6">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="7">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="8">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="9">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="10">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="11">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="12">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="13">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="14">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="15">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="16">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="17">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
-        <div class="player">
+        <div class="player" id="18">
             <div class="identity">平民</div>
             <div class="number">1号</div>
         </div>
@@ -112,12 +109,10 @@
     </main>
     <div class="blank"></div>
     <footer>
-        <a class="vote" href="gameover.html">
-            <button class="vote-butn">投死</button>
-        </a>
+        <button class="vote-butn" id="start">确定</button>
     </footer>
-    <script type="text/javascript" src="js/music.js"></script>
     <script type="text/javascript" src="../jquery-3.3.1/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/judge-diary.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/state.js"></script>
 </body>
 </html>

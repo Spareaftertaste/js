@@ -15,7 +15,7 @@
 <body>
 <header class="flex">
     <span id="headerBackBtn"></span>
-    <span>法官日记</span>
+    <span>法官台本</span>
     <span id="close">&#10005</span>
 </header>
 <section>
@@ -25,20 +25,24 @@
         <div class="content-right">
             <div class="flex">
                 <div class="moon"></div>
-                <div class="step"><span class="triangle"></span>杀手杀人</div>
+                <div class="step murder"><span class="triangle"></span>杀手杀人</div>
             </div>
-            <div class="game-content">3号被杀死，真实身份是平民</div>
+            <div class="game-content">
+                <!--3号被杀死，真实身份是平民-->
+            </div>
             <div class="flex">
                 <div class="sun"></div>
-                <div class="step"><span class="triangle"></span>亡灵发表遗言</div>
+                <div class="step lastWord"><span class="triangle"></span>亡灵发表遗言</div>
             </div>
             <div class="flex">
-                <div class="step"><span class="triangle"></span>玩家依次发言</div>
+                <div class="step speak"><span class="triangle"></span>玩家依次发言</div>
             </div>
             <div class="flex">
-                <div class="step"><span class="triangle"></span>全民投票</div>
+                <div class="step vote"><span class="triangle"></span>全民投票</div>
             </div>
-            <div class="game-content">5号被投票投死，真是身份是平民</div>
+            <div class="game-content">
+                <!--5号被投票投死，真是身份是平民-->
+            </div>
         </div>
     </div>
 </section>
@@ -49,5 +53,6 @@
 </footer>
 <script type="text/javascript" src="../jquery-3.3.1/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/judge.js"></script>
+<script type="text/javascript" src="js/state.js"></script>
 </body>
 </html>

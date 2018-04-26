@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 100px;
+  background-color: #fff;
+}
+body{
+
+  font-size: 16px;
+
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+main{
+  margin: .4rem;
+  padding: .6rem .4rem .2rem .4rem;
+  background-color: #eee;
+  border-radius: 5px;
+}
+h1,
+.brief{
+  margin-top: .1rem;
+  text-align: center;
+}
+.box{
+  margin-top: .1rem;
+  display: flex;
+  justify-content: center;
+}
+.photo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  div{
+    text-align: center;
+    font-size: .1rem;
+  }
+}
+img{
+  //position: absolute;
+  //left: 50%;
+  //right: 50%;
+  //transform: translate(-50%,-50%);
+  margin: .01rem .01rem 0 .01rem;
+  max-width: 900px;
+  max-height: 500px;
+  @media screen and (max-width:900px){
+    width: 100%;
+    height: auto;
+  }
+}
+section{
+  padding: .6rem;
+  div{
+    margin: .05rem 0;
+    font-weight: bolder;
+  }
+  ul{
+    li{
+      margin: .1rem 0;
+    }
+  }
+  @media screen  and  (max-width: 900px){
+    padding: .1rem;
+  }
+}
+footer{
+  margin: 0 .4rem;
+  padding: .05rem 0;
+  text-align: center;
+  font-size: .12rem;
+  border-top: #eee solid 1px;
+}
