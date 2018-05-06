@@ -51,13 +51,17 @@ header {
 section {
   margin: .1rem .1rem;
   background-color: #fff;
-  text-align: center;
-  border: #999 solid; }
+  text-align: center; }
   section h3 {
-    border-bottom: #999 solid;
+    border: #999 solid;
     height: .4rem;
     line-height: .4rem;
     color: #29bde0; }
+
+.content {
+  border-left: #999 solid;
+  border-right: #999 solid;
+  border-bottom: #999 solid; }
 
 .content-left {
   padding-top: .2rem;
@@ -119,7 +123,8 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  background-color: #94deef; }
+  background-color: #94deef;
+  z-index: 50; }
   footer button {
     margin: .2rem .2rem;
     width: 40%;

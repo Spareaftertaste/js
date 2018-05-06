@@ -52,11 +52,13 @@ nav{
 //以上是导航栏样式
 main{
   margin-top: 1.5rem;
+  padding: 0 .17rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .player{
+  position: relative;
   display: none;
   margin: .2rem .1rem;
   width: 20vw;
@@ -80,6 +82,15 @@ main{
   color: #fff;
   background-color: #83b09a;
   text-align: center;
+}
+.knife{
+  position: absolute;bottom: -.3rem;
+  margin-left: 8vw;
+  background: url("../../img/murder.png") no-repeat center center;
+  background-size: .2rem .2rem;
+  width: .2rem;
+  height: .2rem;
+  visibility: hidden;
 }
 .blank{
   height: .8rem;
