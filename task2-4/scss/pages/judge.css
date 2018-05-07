@@ -90,7 +90,8 @@ section {
   background: url("../../img/sun.png") no-repeat center center #fff;
   background-size: .2rem .2rem; }
 
-.game-content {
+.vote-content,
+.murder-content {
   margin: 0 .1rem; }
 
 .step {

@@ -10,31 +10,16 @@ var player= sessionStorage.getItem('player'),
     lastWord = $(".lastWord"),
     speak = $(".speak"),
     vote = $(".vote"),
-    section = $("section");
-console.log(section[0]);
-$(document).ready(function(){
-    section.hide();//隐藏所有
-    sessionStorage.setItem("date","1");//存储游戏时间
-    sessionStorage.setItem("time","day");//存储昼夜情况
-    var time = sessionStorage.getItem("time"),
-        date = parseInt(sessionStorage.getItem("date"));
-    console.log(date);
-    for(var i= date ; i > 0;i-- ){
-        section.eq(i-1).show();//利用循环让相应目录显示出来
-    }
-    sectionTitle.next().toggle();//折叠所有目录
-    sectionTitle.click(function () {
-        $(this).next().toggle("normal");//点击日期控制内容折叠
-    });
-    // var a = murder.css("background-color","black"),
-    //     b = lastWord.css("background-color","black"),
-    //     c = speak.css("background-color","black");
-    murder.click(function(){
-    })
-});
+    section = $("section"),
+    deathNote = sessionStorage.getItem("deadMan");
+console.log("deadNote: "+deathNote);
+console.log(typeof deathNote);
+
+
 close.click(function(){
     if (confirm("您确定要退出游戏吗？")) {
         window.location.href = 'index.html';
+        sessionStorage.clear();
     }
 });
 headerBackBtn.click(function(){
@@ -43,44 +28,18 @@ headerBackBtn.click(function(){
 gameOver.click(function(){
     if (confirm("您确定要结束本轮游戏吗？")) {
         window.location.href = 'index.html';
+        sessionStorage.clear();
     }
 });
 diary.click(function(){
     window.location.href='judge-diary.html';
 });
-//定义一个有限状态机
-// var switchMenu={
-//     state:"off",//当前状态
-//     trans:function(){//状态和状态变化规则 //包含了动作
-//         switch (this.state){
-//             case "off":
-//                 this.state="on";
-//                 content.hide(300);
-//                 sectionTitle.css("border","none");
-//                 break;
-//             case "on":
-//                 this.state="off";
-//                 content.show(300);
-//                 sectionTitle.css("border-bottom","#999 solid");
-//                 break;
-//             default:
-//                 this.state="off";
-//                 content.hide(300);
-//                 sectionTitle.css("border","none");
-//         }
-//     },
-//     //事件，不同的事件对应不同的规则
-//     event:function(){this.trans();console.log(switchMenu)}
-// };
-// sectionTitle.on("click",function(){
-//     switchMenu.event();//给按钮添加点击事件 //控制菜单的折叠
-// });
-sessionStorage.setItem("step","none");
 var game = {
     state : sessionStorage.getItem("step"),//当前状态
     murderStep : function () {
         switch (game.state) {
-            case "none" :
+            case null :
+            case "none":
                 sessionStorage.setItem("step","murder");
                 location.href = "game.html";
                 break;
@@ -96,15 +55,15 @@ var game = {
     },
     lastWordStep : function () {
         switch (game.state) {
+            case null:
             case "none":
-            case "murder":
             case "vote" :
                 alert("请按照游戏步骤进行");
                 break;
             case "speak":
                 alert("请勿重复操作");
                 break;
-            case "dead" :
+            case "murder" :
                 alert("请死者亮明身份并发表遗言");
                 game.state = "speak" ;
                 sessionStorage.setItem("step",game.state);
@@ -115,6 +74,7 @@ var game = {
     },
     speakStep : function () {
         switch (game.state) {
+            case null:
             case "none":
             case"kill":
             case"dead":
@@ -134,6 +94,7 @@ var game = {
     },
     voteStep : function () {
         switch (game.state){
+            case null:
             case"none":
             case"murder":
             case"dead":
@@ -150,3 +111,68 @@ murder.on("click",function(){game.murderStep()});//点击第一个按钮开始�
 lastWord.on("click",function(){game.lastWordStep()});//点击第二个按钮发表遗言
 speak.on("click",function(){game.speakStep()});//点击点三个按钮玩家开始发言讨论
 vote.on("click",function(){game.voteStep()});//点击第四个按钮开始投票
+$(document).ready(function(){
+    if(deathNote === "a,a" ){
+        deathNote = deathNote.toString();
+        deathNote = deathNote.split(",");//初始化死亡名单
+        deathNote = deathNote.slice(0,0);
+        sessionStorage.setItem("deadMan",deathNote);
+        console.log("deathNote:"+deathNote);
+        console.log(Object.getOwnPropertyNames(deathNote));
+
+    }
+
+    var date = parseInt(sessionStorage.getItem("date"));//取出游戏时间
+    section.hide();//隐藏所有目录
+    for(var i= date ; i > 0;i-- ){
+        section.eq(i-1).show();//利用循环让相应目录显示出来
+        console.log(murder.eq(i-1));
+    }
+    for(var e = date-1;e>0;e-- ){//除了最新的一天，其他的按钮都失效
+        murder.eq(e-1).css("background-color","#83b09a");
+        murder.eq(e-1).find(".triangle").css("background-color","#83b09a");
+        murder.eq(e-1).off("click");
+        lastWord.eq(e-1).css("background-color","#83b09a");
+        lastWord.eq(e-1).find(".triangle").css("background-color","#83b09a");
+        lastWord.eq(e-1).off("click");
+        speak.eq(e-1).css("background-color","#83b09a");
+        speak.eq(e-1).find(".triangle").css("background-color","#83b09a");
+        speak.eq(e-1).off("click");
+        vote.eq(e-1).css("background-color","#83b09a");
+        vote.eq(e-1).find(".triangle").css("background-color","#83b09a");
+        vote.eq(e-1).off("click");
+    }
+    switch (game.state){//从杀人页面转跳过来时渲染第一个按钮
+        case"none":
+        case"dead":
+        case"speak":
+        case "vote":
+            break;
+        case"murder":
+            murder.css("background-color","#83b09a");
+            $(".murder .triangle").css("background-color","#83b09a");
+            if(deathNote.slice(-5,-1) === "none"){
+                $(".murder-content").eq(date-1).html("昨晚没人死亡");
+            }else {
+                // deathNote = deathNote.slice(0,deathNote.length);
+                deathNote = deathNote.split(",");
+                console.log(deathNote);
+                $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
+            }
+            break;
+    }
+    sectionTitle.next().toggle(false);//折叠所有目录
+    sectionTitle.eq(date-1).next().toggle(true);
+    sectionTitle.click(function () {
+        $(this).next().toggle("normal");//点击日期控制内容折叠
+    });
+    murder.click(function(){
+    });
+    var killerNum =sessionStorage.getItem("killer"),
+        civilianNum =sessionStorage.getItem("civilian");
+    console.log("date:"+date);
+    console.log("state:"+game.state);
+    console.log("deathNote:"+deathNote);
+    console.log("killer:"+killerNum);
+    console.log("civilian:"+civilianNum);
+});

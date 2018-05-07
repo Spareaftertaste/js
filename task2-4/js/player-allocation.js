@@ -1,7 +1,10 @@
 var playerNumber= document.getElementById('playerNumber');
 var range=document.getElementById('range');
 document.getElementById("headerBackBtn").onclick =function () {
+    sessionStorage.clear();
     window.location.href='index.html';
+
+
 };
 document.getElementById('licensing').onclick =function (){
     if(parseInt(document.getElementById('killer').innerHTML)===parseInt(playerNumber.value/4)){

@@ -38,7 +38,8 @@ header {
   right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  z-index: 500; }
 
 .back {
   display: inline-block;
@@ -61,7 +62,8 @@ nav {
   right: 0;
   height: .6rem;
   line-height: .6rem;
-  background-color: #b9e9f5; }
+  background-color: #b9e9f5;
+  z-index: 500; }
 
 .small-triangle {
   position: absolute;
@@ -84,15 +86,14 @@ nav {
 
 main {
   margin-top: 1.5rem;
-  padding: 0 .17rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  align-content: space-between; }
 
 .player {
   position: relative;
   display: none;
-  margin: .2rem .1rem;
+  margin: .2rem 5.3vw;
   width: 20vw;
   height: 20vw;
   border: 3px #fff solid; }
@@ -126,7 +127,7 @@ main {
   visibility: hidden; }
 
 .blank {
-  height: .8rem; }
+  height: 1.3rem; }
 
 footer {
   position: fixed;

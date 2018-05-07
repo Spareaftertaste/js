@@ -28,3 +28,13 @@ end.onclick= function() {
 //     i=i+1;
 //     console.log(i);
 // };
+var byId = document.getElementById("end"),
+    byClass = document.getElementsByClassName("box"),
+    byqs = document.querySelectorAll('.box'),
+    jqById = $("#end"),
+    jqByClass = $(".box");
+console.log(byId);
+console.log(byClass);
+console.log(byqs);
+console.log(jqById);
+console.log(jqByClass);

@@ -27,11 +27,11 @@ header{
 main{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  //justify-content: space-between;
 }
 .player{
   display: none;
-  margin: .2rem .1rem;
+  margin: .2rem 5.3vw;
   width: 20vw;
   height: 20vw;
   border: 3px #fff solid;

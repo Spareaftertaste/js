@@ -13,6 +13,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 500;
 }
 .back{
   display: inline-block;
@@ -31,6 +32,7 @@ header{
 //以上是头部样式
 nav{
   @include nav;
+  z-index: 500;
 }
 .small-triangle{
   position: absolute;top: 0;left: .2rem;
@@ -52,15 +54,15 @@ nav{
 //以上是导航栏样式
 main{
   margin-top: 1.5rem;
-  padding: 0 .17rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  //justify-content: space-between;
+  align-content: space-between;
 }
 .player{
   position: relative;
   display: none;
-  margin: .2rem .1rem;
+  margin: .2rem 5.3vw;
   width: 20vw;
   height: 20vw;
   border: 3px #fff solid;
@@ -93,7 +95,7 @@ main{
   visibility: hidden;
 }
 .blank{
-  height: .8rem;
+  height: 1.3rem;
 }
 //以上是中间内容
 footer{
