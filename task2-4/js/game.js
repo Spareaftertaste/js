@@ -9,7 +9,6 @@ var player= sessionStorage.getItem('player'),
     index = 0,//被选中玩家的索引
     deathNote = sessionStorage.getItem("deadMan"),
     date = parseInt(sessionStorage.getItem("date")),//游戏中的时间
-
     playerBox= $('.player');
     console.log(killerNum,civilianNum);
 close.click(function(){
@@ -19,6 +18,15 @@ close.click(function(){
     }
 });
 window.onload=function () {
+    console.log("date:"+ date);
+    if(date === 1 && step === "vote"){
+        deathNote = deathNote +",";
+    }
+    console.log("date: "+date);
+    if(date > 1){
+        deathNote = deathNote +",";
+    }
+    console.log("deathNote:"+deathNote);
     console.log(step);
     if(step ==="vote"){
         $("#headTitle").text("投票");
@@ -39,21 +47,19 @@ window.onload=function () {
         $(".identity")[i].innerHTML= playerIdentity[b].slice(3);  //玩家身份
         ++i;
     }
-    console.log("deathNote:"+deathNote);
-    if (deathNote.length === 0){
-        deathNote = [];
-        console.log("deathNote:"+deathNote);
-    }else {
-        deathNote = deathNote +",";
-        deathNote.split(",");
-        console.log("deathNote:"+deathNote);
-    }
+    death();
 };
-
-
-
-
-console.log(date);
+function death() {
+    var death =deathNote.split(",");
+    console.log(death);
+    for (var i=0;i<18;i++ ){
+        a = i+ "";
+        if(death.indexOf(a) >=0 ){
+            $(".identity").eq(i-1).css("background-color","#83b09a");
+        }
+        console.log(death.indexOf(a) >=0);
+    }
+}
 playerBox.click(function () {
     index = 0;
     $(".knife").css("visibility","hidden");
@@ -64,9 +70,13 @@ playerBox.click(function () {
     console.log("选中玩家的编号： "+ index);
 });
 start.click(function () {
-    if(date>1){
-        deathNote = deathNote.split(",");
-        if (deathNote.indexOf(index) >= 0){
+    if(date>1){//判断这个玩家是不是个死人
+        console.log("deathNote:"+deathNote);
+        var death = deathNote;
+        death = death.split(",");
+        if (death.indexOf(index) >= 0){
+            console.log("deathNote:"+deathNote);
+            console.log("death:"+death);
             alert("这个人已经死了，请不要再伤害它了");
             return false;
         }
@@ -75,7 +85,7 @@ start.click(function () {
         case "杀手杀人" :
             if( select === 0){
                 if(confirm("杀手是否放弃杀人")){//当没有玩家被选中时询问杀手是否放弃杀人
-                    deathNote.splice(deathNote.length-1,0,"none");
+                    deathNote = deathNote + "none";
                     sessionStorage.setItem("deadMan",deathNote);
                     window.location.href = 'judge.html';
                 }
@@ -86,7 +96,7 @@ start.click(function () {
                     if(confirm("确定要杀死它么")){
                         console.log("deathNote: "+deathNote);
                         console.log("index: "+index);
-                        deathNote.splice(deathNote.length-1,0,index);
+                        deathNote = deathNote + index;
                         console.log("deathNote: "+deathNote);
 
                         civilianNum--;
@@ -94,7 +104,6 @@ start.click(function () {
                         sessionStorage.setItem("civilian",civilianNum);
                         if(killerNum >= civilianNum){
                             alert("游戏结束杀手获胜");
-                            sessionStorage.clear();
                             window.location.href = 'gameover.html';
                         }else {
                             window.location.href = 'judge.html';
@@ -107,54 +116,53 @@ start.click(function () {
             if( select === 0){
                 alert("请选择一名玩家并将其拉出去斩了")
             }else {
-                if($(".identity")[index-1].innerHTML === "杀手"){
+                if($(".identity")[index-1].innerHTML === "杀手"){//如果投票的人是杀手的话
                     if(confirm("确定要投它么")) {
                         console.log("deathNote: "+deathNote);
                         console.log("index: "+index);
-                        deathNote.splice(deathNote.length-1,0,index);
+                        deathNote = deathNote + index;
                         console.log("deathNote: "+deathNote);
                         killerNum--;
                         sessionStorage.setItem("deadMan", deathNote);
                         sessionStorage.setItem("killer", killerNum);
                         if (killerNum >= civilianNum) {
                             alert("游戏结束杀手获胜");
-                            sessionStorage.clear();
                             window.location.href = 'gameover.html';
                         }else if(killerNum === 0){
                             alert("游戏结束平民获胜");
-                            sessionStorage.clear();
                             window.location.href = 'gameover.html';
                         } else {
                             date++;
                             sessionStorage.setItem("date",date);
-                            console.log("date:"+ date);
-                            sessionStorage.setItem("step","none");
                             window.location.href = 'judge.html';
                         }
                     }
-                }else {
+                }else {//如果投票的人是平民的话
                     if(confirm("确定要投它么")) {
                         console.log("deathNote: "+deathNote);
                         console.log("index: "+index);
-                        deathNote.splice(deathNote.length-1,0,index);
+                        deathNote = deathNote + index;
                         console.log("deathNote: "+deathNote);
                         civilianNum--;
                         sessionStorage.setItem("deadMan", deathNote);
                         sessionStorage.setItem("civilian", civilianNum);
                         if (killerNum >= civilianNum) {
                             alert("游戏结束杀手获胜");
-                            sessionStorage.clear();
                             window.location.href = 'gameover.html';
                         } else {
                             date++;
                             sessionStorage.setItem("date",date);
-                            console.log("date:"+ date);
-                            sessionStorage.setItem("step","none");
                             window.location.href = 'judge.html';
                         }
                     }
                 }
             }
-
     }
 });
+// function toOrNotToBe() {//判断玩家是不是死人
+//     console.log("deathNote:"+deathNote);
+//     if (deathNote.indexOf(index) >= 0){
+//         alert("这个人已经死了，请不要再伤害它了");
+//         return false;
+//     }
+// }

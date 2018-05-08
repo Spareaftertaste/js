@@ -12,10 +12,6 @@ var player= sessionStorage.getItem('player'),
     vote = $(".vote"),
     section = $("section"),
     deathNote = sessionStorage.getItem("deadMan");
-console.log("deadNote: "+deathNote);
-console.log(typeof deathNote);
-
-
 close.click(function(){
     if (confirm("您确定要退出游戏吗？")) {
         window.location.href = 'index.html';
@@ -39,19 +35,18 @@ var game = {
     murderStep : function () {
         switch (game.state) {
             case null :
-            case "none":
+            case "vote":
                 sessionStorage.setItem("step","murder");
                 location.href = "game.html";
                 break;
-            case "dead" :
+            case "murder" :
                 alert("请勿重复操作");
                 break;
             case"speak" :
-            case"vote":
+            case "none":
                 alert("请按游戏步骤进行");
                 break;
         }
-
     },
     lastWordStep : function () {
         switch (game.state) {
@@ -75,17 +70,16 @@ var game = {
     speakStep : function () {
         switch (game.state) {
             case null:
-            case "none":
+            case "vote":
             case"kill":
-            case"dead":
                 alert("请按照游戏步骤进行");
                 break;
-            case"vote":
+            case"none":
                 alert("请勿重复操作");
                 break;
             case "speak":
                 alert("请玩家依次发言讨论");
-                game.state = "vote";
+                game.state = "none";
                 sessionStorage.setItem("step",game.state);
                 speak.css("background-color","#83b09a");
                 $(".speak .triangle").css("background-color","#83b09a");
@@ -95,13 +89,14 @@ var game = {
     voteStep : function () {
         switch (game.state){
             case null:
-            case"none":
+            case"vote":
             case"murder":
-            case"dead":
             case"speak":
                 alert("请按照游戏步骤进行");
                 break;
-            case "vote":
+            case "none":
+                game.state = "vote";
+                sessionStorage.setItem("step",game.state);
                 location.href = "game.html";
                 break;
         }
@@ -112,16 +107,6 @@ lastWord.on("click",function(){game.lastWordStep()});//点击第二个按钮发�
 speak.on("click",function(){game.speakStep()});//点击点三个按钮玩家开始发言讨论
 vote.on("click",function(){game.voteStep()});//点击第四个按钮开始投票
 $(document).ready(function(){
-    if(deathNote === "a,a" ){
-        deathNote = deathNote.toString();
-        deathNote = deathNote.split(",");//初始化死亡名单
-        deathNote = deathNote.slice(0,0);
-        sessionStorage.setItem("deadMan",deathNote);
-        console.log("deathNote:"+deathNote);
-        console.log(Object.getOwnPropertyNames(deathNote));
-
-    }
-
     var date = parseInt(sessionStorage.getItem("date"));//取出游戏时间
     section.hide();//隐藏所有目录
     for(var i= date ; i > 0;i-- ){
@@ -142,25 +127,73 @@ $(document).ready(function(){
         vote.eq(e-1).find(".triangle").css("background-color","#83b09a");
         vote.eq(e-1).off("click");
     }
-    switch (game.state){//从杀人页面转跳过来时渲染第一个按钮
-        case"none":
-        case"dead":
-        case"speak":
+    deathNote = deathNote.slice(0,deathNote.length);
+    deathNote = deathNote.split(",");
+    console.log("deathNote:"+deathNote);
+    switch (game.state){//根据当前游戏进度不同按钮颜色不一样
         case "vote":
             break;
-        case"murder":
+        case"none":
             murder.css("background-color","#83b09a");
+
             $(".murder .triangle").css("background-color","#83b09a");
-            if(deathNote.slice(-5,-1) === "none"){
+            if(deathNote[deathNote.length-1] === "none"){
                 $(".murder-content").eq(date-1).html("昨晚没人死亡");
             }else {
-                // deathNote = deathNote.slice(0,deathNote.length);
-                deathNote = deathNote.split(",");
+                console.log(deathNote);
+                $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
+            }
+            lastWord.css("background-color","#83b09a");
+            $(".lastWord .triangle").css("background-color","#83b09a");
+            speak.css("background-color","#83b09a");
+            $(".speak .triangle").css("background-color","#83b09a");
+            break;
+        case"speak":
+            murder.css("background-color","#83b09a");
+
+            $(".murder .triangle").css("background-color","#83b09a");
+            if(deathNote[deathNote.length-1] === "none"){
+                $(".murder-content").eq(date-1).html("昨晚没人死亡");
+            }else {
+                console.log(deathNote);
+                $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
+            }
+            lastWord.css("background-color","#83b09a");
+            $(".lastWord .triangle").css("background-color","#83b09a");
+            break;
+
+        case"murder":
+            murder.css("background-color","#83b09a");
+
+            $(".murder .triangle").css("background-color","#83b09a");
+            if(deathNote[deathNote.length-1] === "none"){
+                $(".murder-content").eq(date-1).html("昨晚没人死亡");
+            }else {
                 console.log(deathNote);
                 $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
             }
             break;
     }
+    // if(game.state === "murder" || game.state === "speak" || game.state === "none"){//根据游戏的当前的状态正确渲染按钮颜色
+    //     murder.css("background-color","#83b09a");
+    //     $(".murder .triangle").css("background-color","#83b09a");
+    //     if(deathNote[deathNote.length-1] === "none"){
+    //         $(".murder-content").eq(date-1).html("昨晚没人死亡");
+    //     }else {
+    //         console.log(deathNote);
+    //         $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
+    //     }
+    //     if(game.state === "speak" || game.state === "none"){
+    //         lastWord.css("background-color","#83b09a");
+    //         $(".lastWord .triangle").css("background-color","#83b09a");
+    //         if(game.state === "none"){
+    //             speak.css("background-color","#83b09a");
+    //             $(".speak .triangle").css("background-color","#83b09a");
+    //         }
+    //     }
+    //
+    //
+    // }
     sectionTitle.next().toggle(false);//折叠所有目录
     sectionTitle.eq(date-1).next().toggle(true);
     sectionTitle.click(function () {
@@ -175,4 +208,39 @@ $(document).ready(function(){
     console.log("deathNote:"+deathNote);
     console.log("killer:"+killerNum);
     console.log("civilian:"+civilianNum);
+    if (date > 1){
+        var death = deathNote;
+        console.log(death);
+        for(var a =1;a< date; a++){
+            if(death[a*2-2] === "none"){
+                $(".murder-content").eq(a-1).html("昨晚没人死亡");
+                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是平民");
+            }else {
+                $(".murder-content").eq(a-1).html(death[2*a-2]+"号被杀手杀死，真实身份是平民");
+                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是平民");
+            }
+
+        }
+    }
 });
+function murderBtn() {
+
+    murder.css("background-color","#83b09a");
+
+    $(".murder .triangle").css("background-color","#83b09a");
+    if(deathNote[deathNote.length-1] === "none"){
+        $(".murder-content").eq(date-1).html("昨晚没人死亡");
+    }else {
+        console.log(deathNote);
+        $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
+    }
+}
+function speakBtn() {
+    speak.css("background-color","#83b09a");
+    $(".speak .triangle").css("background-color","#83b09a");
+}
+function noneBtn() {
+
+    lastWord.css("background-color","#83b09a");
+    $(".lastWord .triangle").css("background-color","#83b09a");
+}

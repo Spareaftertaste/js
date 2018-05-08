@@ -11,6 +11,7 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
 .home_btn{
   background: url("../../img/home.png") no-repeat;
   background-size: .3rem .3rem;
@@ -29,14 +30,26 @@ section{
   padding: .1rem .45rem;
   background-color: #29bde0;
 }
-.gameover{
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1.44rem;
-  max-height: .75rem;
-  margin-top: .4rem;
+.flex{
+  display: flex;
+  margin-bottom: .4rem;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.game-over{
+  max-width: 1.6rem;
+  max-height: .85rem;
+}
+.text{
+  margin-top: -.28rem;
+  color: #fff;
+  font-weight: bolder;
+}
+.live{
+  span{
+    margin-right: .1rem;
+  }
 }
 .praise{
   color: #ffc865;
@@ -45,6 +58,9 @@ section{
 .detailed{
   margin-top: .1rem;
   color: #fff;
+  div{
+    margin: .05rem 0;
+  }
 }
 //以上是游戏结果样式
 .content{
@@ -53,11 +69,9 @@ section{
   font-size: .15rem;
   border-bottom: 2px #ddd solid;
 }
-.gaming_time{
-  font-size: .15rem;
-  color: #d6d6d6;
-}
-.gaming{
+.killing,
+.voting{
+  margin: .05rem 0;
   color: #d6d6d6;
 }
 .blank{

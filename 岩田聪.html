@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="233.css">
     <script>
-
+        var a = [1,2,3];
+        sessionStorage.setItem("aa",a);
+        var b = sessionStorage.getItem("aa");
+        console.log("b: "+b);
+        console.log(Object.getOwnPropertyNames(b));
+        console.log("a: "+a);
+        console.log(Object.getOwnPropertyNames(a));
     </script>
 </head>
 <body>

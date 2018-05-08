@@ -158,9 +158,12 @@ input[type=range] {
 
 input[type=range]::-webkit-slider-thumb {
   margin-top: -.07rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: .32rem;
   height: .2rem;
-  width: .1rem;
-  background: #ffa600; }
+  border: none;
+  background: url("../../img/slider.png") no-repeat; }
 
 input[type=range]::-webkit-slider-runnable-track {
   margin-top: .1rem;

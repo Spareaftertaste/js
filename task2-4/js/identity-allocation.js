@@ -1,9 +1,10 @@
 var headerBackBtn= document.getElementById("headerBackBtn");
 var close=document.getElementById('close'),
-    deadMan = "a,a";//存储死亡玩家名单
+    deadMan = "";//存储死亡玩家名单
 sessionStorage.setItem("date","1");//存储游戏时间
 sessionStorage.setItem("deadMan",deadMan);
 headerBackBtn.onclick =function () {
+    sessionStorage.clear();
     window.location.href='player-allocation.html';
 };
 close.onclick= function () {
@@ -68,8 +69,6 @@ function search(arr,dst){
     }
     return 0;
 }
-
-
 var w=1;
 document.getElementById('next').onclick= function (){
     abb();

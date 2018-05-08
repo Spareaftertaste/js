@@ -3,6 +3,7 @@ var player= sessionStorage.getItem('player'),
     headerBackBtn= $("#headerBackBtn"),
     close=$('#close'),
     playerBox= $('.player'),
+    deathNote = sessionStorage.getItem("deadMan"),
     start= $("#start");
 headerBackBtn.click(function(){
     if (confirm("您确定要返回上一步吗，返回上一部将导致玩家身份重新分配")) {
@@ -12,6 +13,7 @@ headerBackBtn.click(function(){
 close.click(function(){
     if (confirm("您确定要退出游戏吗？")) {
         window.location.href = 'index.html';
+        sessionStorage.clear();
     }
 });
 start.click(function(){
@@ -34,4 +36,16 @@ window.onload=function () {
 
         ++i;
     }
+    death();
 };
+function death() {
+    var death =deathNote.split(",");
+    console.log(death);
+    for (var i=0;i<18;i++ ){
+        a = i+ "";
+        if(death.indexOf(a) >=0 ){
+            $(".identity").eq(i-1).css("background-color","#83b09a");
+        }
+        // console.log(death.indexOf(a) >=0);
+    }
+}
