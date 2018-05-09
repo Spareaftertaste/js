@@ -4,22 +4,29 @@ var player= sessionStorage.getItem('player'),
     close=$('#close'),
     playerBox= $('.player'),
     deathNote = sessionStorage.getItem("deadMan"),
+    step = sessionStorage.getItem("step"),
     start= $("#start");
-headerBackBtn.click(function(){
+headerBackBtn.click(function(){//返回到人数设置页面
     if (confirm("您确定要返回上一步吗，返回上一部将导致玩家身份重新分配")) {
-        window.location.href='.html';
+        window.location.href='player-allocation.html';
+        sessionStorage.clear();
     }
 });
-close.click(function(){
+close.click(function(){//退出游戏
     if (confirm("您确定要退出游戏吗？")) {
         window.location.href = 'index.html';
         sessionStorage.clear();
     }
 });
-start.click(function(){
+start.click(function(){//开始游戏
+
     window.location.href = 'judge.html';
 });
 window.onload=function () {
+    if(step !== null){
+        $(".vote-btn")[0].innerHTML ="返回游戏";
+    }
+    console.log("step: "+step);
     player= player.split(",");
     playerIdentity= playerIdentity.split(",");
     console.log(player);
@@ -38,7 +45,7 @@ window.onload=function () {
     }
     death();
 };
-function death() {
+function death() {//判断哪些玩家已经死亡
     var death =deathNote.split(",");
     console.log(death);
     for (var i=0;i<18;i++ ){

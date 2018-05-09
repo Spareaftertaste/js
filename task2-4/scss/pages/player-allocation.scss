@@ -72,14 +72,19 @@ main{
 .key-word{
   padding:0  .2rem .2rem .2rem;
 }
-.player-target{
+.killer-target,
+.civilian-target{
   width: 100%;
   height: .4rem;
   font-size: .18rem;
   border: none;
   border-bottom: #999 solid;
 }
-.player-target::-webkit-input-placeholder {
+.killer-target::-webkit-input-placeholder {
+
+  font-size: .12rem;
+}
+.civilian-target::-webkit-input-placeholder {
 
   font-size: .12rem;
 }
@@ -112,7 +117,7 @@ main{
 }
 .civilian{
   @extend .killer;
-  background: url("../../img/yoshi.png") center left no-repeat;
+  background: url("../../img/yoxi.png") center left no-repeat;
   background-size: .4rem .4rem;
 }
 #licensing{

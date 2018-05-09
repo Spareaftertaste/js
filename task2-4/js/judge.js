@@ -174,26 +174,6 @@ $(document).ready(function(){
             }
             break;
     }
-    // if(game.state === "murder" || game.state === "speak" || game.state === "none"){//根据游戏的当前的状态正确渲染按钮颜色
-    //     murder.css("background-color","#83b09a");
-    //     $(".murder .triangle").css("background-color","#83b09a");
-    //     if(deathNote[deathNote.length-1] === "none"){
-    //         $(".murder-content").eq(date-1).html("昨晚没人死亡");
-    //     }else {
-    //         console.log(deathNote);
-    //         $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
-    //     }
-    //     if(game.state === "speak" || game.state === "none"){
-    //         lastWord.css("background-color","#83b09a");
-    //         $(".lastWord .triangle").css("background-color","#83b09a");
-    //         if(game.state === "none"){
-    //             speak.css("background-color","#83b09a");
-    //             $(".speak .triangle").css("background-color","#83b09a");
-    //         }
-    //     }
-    //
-    //
-    // }
     sectionTitle.next().toggle(false);//折叠所有目录
     sectionTitle.eq(date-1).next().toggle(true);
     sectionTitle.click(function () {
@@ -208,39 +188,25 @@ $(document).ready(function(){
     console.log("deathNote:"+deathNote);
     console.log("killer:"+killerNum);
     console.log("civilian:"+civilianNum);
+    playerIdentity= playerIdentity.split(",");
+    player= player.split(",");
+    console.log("PI: "+playerIdentity);
+    console.log("p: "+player);
     if (date > 1){
         var death = deathNote;
         console.log(death);
         for(var a =1;a< date; a++){
+            var d = death[2*a-1],//被投死人的编号
+                killedIndex = player.indexOf(d),//被投死人的下标
+                killed = playerIdentity[killedIndex].slice(3);//被投死人的身份
+            console.log("被投死人的编号： "+ killed);
             if(death[a*2-2] === "none"){
                 $(".murder-content").eq(a-1).html("昨晚没人死亡");
-                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是平民");
+                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是"+killed);
             }else {
                 $(".murder-content").eq(a-1).html(death[2*a-2]+"号被杀手杀死，真实身份是平民");
-                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是平民");
+                $(".vote-content").eq(a-1).html(death[2*a-1]+"号被投死，真实身份是"+killed);
             }
-
         }
     }
 });
-function murderBtn() {
-
-    murder.css("background-color","#83b09a");
-
-    $(".murder .triangle").css("background-color","#83b09a");
-    if(deathNote[deathNote.length-1] === "none"){
-        $(".murder-content").eq(date-1).html("昨晚没人死亡");
-    }else {
-        console.log(deathNote);
-        $(".murder-content").eq(date-1).html(deathNote[deathNote.length-1]+"号被杀手杀死，真实身份是平民") ;
-    }
-}
-function speakBtn() {
-    speak.css("background-color","#83b09a");
-    $(".speak .triangle").css("background-color","#83b09a");
-}
-function noneBtn() {
-
-    lastWord.css("background-color","#83b09a");
-    $(".lastWord .triangle").css("background-color","#83b09a");
-}

@@ -3,22 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="c58b7e48-c910-4463-8a30-802578cdb553" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/task1/js/task1.js" afterPath="$PROJECT_DIR$/task1/js/task1.js" />
-      <change beforePath="$PROJECT_DIR$/task1/task1.html" afterPath="$PROJECT_DIR$/task1/task1.html" />
-      <change beforePath="$PROJECT_DIR$/task2-4/js/game.js" afterPath="$PROJECT_DIR$/task2-4/js/game.js" />
+      <change beforePath="$PROJECT_DIR$/task2-4/identity-allocation.html" afterPath="$PROJECT_DIR$/task2-4/identity-allocation.html" />
+      <change beforePath="$PROJECT_DIR$/task2-4/img/Yoshi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/task2-4/img/gameover_03.png" afterPath="$PROJECT_DIR$/task2-4/img/gameover_03.png" />
+      <change beforePath="$PROJECT_DIR$/task2-4/index.html" afterPath="$PROJECT_DIR$/task2-4/index.html" />
+      <change beforePath="$PROJECT_DIR$/task2-4/js/gameOver.js" afterPath="$PROJECT_DIR$/task2-4/js/gameOver.js" />
       <change beforePath="$PROJECT_DIR$/task2-4/js/identity-allocation.js" afterPath="$PROJECT_DIR$/task2-4/js/identity-allocation.js" />
+      <change beforePath="$PROJECT_DIR$/task2-4/js/index.js" afterPath="$PROJECT_DIR$/task2-4/js/index.js" />
+      <change beforePath="$PROJECT_DIR$/task2-4/js/judge-diary.js" afterPath="$PROJECT_DIR$/task2-4/js/judge-diary.js" />
       <change beforePath="$PROJECT_DIR$/task2-4/js/judge.js" afterPath="$PROJECT_DIR$/task2-4/js/judge.js" />
       <change beforePath="$PROJECT_DIR$/task2-4/js/player-allocation.js" afterPath="$PROJECT_DIR$/task2-4/js/player-allocation.js" />
-      <change beforePath="$PROJECT_DIR$/task2-4/judge.html" afterPath="$PROJECT_DIR$/task2-4/judge.html" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/game.css" afterPath="$PROJECT_DIR$/task2-4/scss/pages/game.css" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/game.css.map" afterPath="$PROJECT_DIR$/task2-4/scss/pages/game.css.map" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/game.scss" afterPath="$PROJECT_DIR$/task2-4/scss/pages/game.scss" />
+      <change beforePath="$PROJECT_DIR$/task2-4/judge-diary.html" afterPath="$PROJECT_DIR$/task2-4/judge-diary.html" />
+      <change beforePath="$PROJECT_DIR$/task2-4/player-allocation.html" afterPath="$PROJECT_DIR$/task2-4/player-allocation.html" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/index.css" afterPath="$PROJECT_DIR$/task2-4/scss/pages/index.css" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/index.css.map" afterPath="$PROJECT_DIR$/task2-4/scss/pages/index.css.map" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/index.scss" afterPath="$PROJECT_DIR$/task2-4/scss/pages/index.scss" />
       <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.css" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.css" />
       <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.css.map" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.css.map" />
       <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge.css" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge.css" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge.css.map" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge.css.map" />
-      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/judge.scss" afterPath="$PROJECT_DIR$/task2-4/scss/pages/judge.scss" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.css" afterPath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.css" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.css.map" afterPath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.css.map" />
+      <change beforePath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss" afterPath="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,41 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="judge.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2-4/js/judge.js">
+      <file leaf-file-name="gameOver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/js/gameOver.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task2-4/js/game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="identity-allocation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2-4/js/identity-allocation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="judge-diary.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2-4/js/judge-diary.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+              <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -75,8 +50,78 @@
       <file leaf-file-name="player-allocation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task2-4/js/player-allocation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="54">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="identity-allocation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/js/identity-allocation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="55" lean-forward="true" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="judge-diary.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/judge-diary.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2700">
+              <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="judge-diary.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player-allocation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/player-allocation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="identity-allocation.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/identity-allocation.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="identity-allocation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task2-4/identity-allocation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player-allocation.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -87,8 +132,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -96,12 +141,19 @@
     <findStrings>
       <find>_</find>
       <find>document.getElementById</find>
-      <find>date</find>
       <find>killerNum</find>
       <find>deadman</find>
       <find>death</find>
-      <find>deathNote</find>
       <find>deathnote</find>
+      <find>deathNote</find>
+      <find>clear</find>
+      <find>date</find>
+      <find>sessionStorage.setItem(&quot;step&quot;,&quot;none&quot;);</find>
+      <find>none</find>
+      <find>step</find>
+      <find>tar</find>
+      <find>killerTarget</find>
+      <find>killerk</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,34 +165,37 @@
         <option value="$PROJECT_DIR$/task1/SCSS/task1.scss" />
         <option value="$PROJECT_DIR$/task1/scss/task1.scss" />
         <option value="$PROJECT_DIR$/task2-4/plyer-allocation.html" />
-        <option value="$PROJECT_DIR$/task2-4/index.html" />
-        <option value="$PROJECT_DIR$/task2-4/js/index.js" />
-        <option value="$PROJECT_DIR$/task2-4/scss/pages/index.scss" />
         <option value="$PROJECT_DIR$/task2-4/js/plyer-allocation.js" />
         <option value="$PROJECT_DIR$/task2-4/scss/pages/plyer-allocation.scss" />
-        <option value="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss" />
-        <option value="$PROJECT_DIR$/task2-4/identity-allocation.html" />
         <option value="$PROJECT_DIR$/task2-4/scss/pages/identity-allocation.scss" />
         <option value="$PROJECT_DIR$/task2-4/js/judge.scss.js" />
         <option value="$PROJECT_DIR$/task2-4/muder.html" />
-        <option value="$PROJECT_DIR$/task2-4/player-allocation.html" />
-        <option value="$PROJECT_DIR$/task2-4/judge-diary.html" />
         <option value="$PROJECT_DIR$/task2-4/scss/components/_triangle.scss" />
-        <option value="$PROJECT_DIR$/岩田聪.html" />
         <option value="$PROJECT_DIR$/233.scss" />
         <option value="$PROJECT_DIR$/task2-4/js/state.js" />
         <option value="$PROJECT_DIR$/task2-4/game.html" />
-        <option value="$PROJECT_DIR$/task2-4/js/judge-diary.js" />
         <option value="$PROJECT_DIR$/task1/task1.html" />
         <option value="$PROJECT_DIR$/task1/js/task1.js" />
         <option value="$PROJECT_DIR$/task2-4/scss/pages/game.scss" />
         <option value="$PROJECT_DIR$/task2-4/scss/pages/judge.scss" />
         <option value="$PROJECT_DIR$/task2-4/judge.html" />
-        <option value="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss" />
-        <option value="$PROJECT_DIR$/task2-4/js/identity-allocation.js" />
-        <option value="$PROJECT_DIR$/task2-4/js/player-allocation.js" />
-        <option value="$PROJECT_DIR$/task2-4/js/judge.js" />
+        <option value="$PROJECT_DIR$/岩田聪.html" />
+        <option value="$PROJECT_DIR$/task2-4/scss/pages/gameover.scss" />
         <option value="$PROJECT_DIR$/task2-4/js/game.js" />
+        <option value="$PROJECT_DIR$/task2-4/gameover.html" />
+        <option value="$PROJECT_DIR$/task2-4/scss/pages/index.scss" />
+        <option value="$PROJECT_DIR$/task2-4/index.html" />
+        <option value="$PROJECT_DIR$/task2-4/judge-diary.html" />
+        <option value="$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss" />
+        <option value="$PROJECT_DIR$/task2-4/js/judge-diary.js" />
+        <option value="$PROJECT_DIR$/task2-4/js/judge.js" />
+        <option value="$PROJECT_DIR$/task2-4/js/index.js" />
+        <option value="$PROJECT_DIR$/task2-4/player-allocation.html" />
+        <option value="$PROJECT_DIR$/task2-4/js/player-allocation.js" />
+        <option value="$PROJECT_DIR$/task2-4/identity-allocation.html" />
+        <option value="$PROJECT_DIR$/task2-4/js/identity-allocation.js" />
+        <option value="$PROJECT_DIR$/task2-4/js/gameOver.js" />
+        <option value="$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss" />
       </list>
     </option>
   </component>
@@ -151,10 +206,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
-    <option name="y" value="100" />
+    <option name="x" value="158" />
+    <option name="y" value="136" />
     <option name="width" value="1477" />
-    <option name="height" value="838" />
+    <option name="height" value="939" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -171,8 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,7 +360,11 @@
       <workItem from="1525407726393" duration="7228000" />
       <workItem from="1525416458804" duration="30957000" />
       <workItem from="1525580604119" duration="15943000" />
-      <workItem from="1525648746238" duration="34121000" />
+      <workItem from="1525648746238" duration="34147000" />
+      <workItem from="1525739915394" duration="2966000" />
+      <workItem from="1525749752491" duration="742000" />
+      <workItem from="1525760210958" duration="32283000" />
+      <workItem from="1525826818308" duration="13195000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1523109506638</created>
@@ -398,11 +457,25 @@
       <option name="project" value="LOCAL" />
       <updated>1525622360414</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="task4">
+      <created>1525708570501</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1525708570501</updated>
+    </task>
+    <task id="LOCAL-00015" summary="task4 完成">
+      <created>1525798695215</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1525798695216</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355893000" />
+    <option name="totallyTimeSpent" value="405105000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -414,15 +487,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="100" width="1477" height="838" extended-state="0" />
+    <frame x="158" y="136" width="1477" height="939" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36151204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997155" sideWeight="0.5030675" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28307256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2825112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -451,29 +524,16 @@
     <MESSAGE value="task2" />
     <MESSAGE value="task3 完成" />
     <MESSAGE value="task4" />
-    <option name="LAST_COMMIT_MESSAGE" value="task4" />
+    <MESSAGE value="task4 完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="task4 完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task1/scss/task1.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task1/js/task1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task1/task1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -575,20 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/identity-allocation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2-4/scss/base/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -610,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1917">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2-4/js/judge.scss.js" />
     <entry file="file://$PROJECT_DIR$/task2-4/muder.html" />
     <entry file="file://$PROJECT_DIR$/task2-4/scss/components/_triangle.scss">
@@ -633,43 +672,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/player-allocation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2-4/js/state.js" />
-    <entry file="file://$PROJECT_DIR$/task2-4/gameover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/岩田聪.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task1/task1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/identity-allocation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="74" lean-forward="false" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,73 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/gameover.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/judge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#7;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#9;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/judge.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="74" column="15" lean-forward="false" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/game.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,6 +691,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/岩田聪.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/judge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="333" column="6" lean-forward="false" selection-start-line="333" selection-start-column="6" selection-end-line="333" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/gameover.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4131">
+          <caret line="153" column="64" lean-forward="false" selection-start-line="153" selection-start-column="64" selection-end-line="153" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="70" column="57" lean-forward="true" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/js/judge-diary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -763,50 +756,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/judge-diary.html">
+    <entry file="file://$PROJECT_DIR$/task2-4/js/judge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="88" column="33" lean-forward="false" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+        <state relative-caret-position="423">
+          <caret line="209" column="9" lean-forward="true" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/js/judge-diary.js">
+    <entry file="file://$PROJECT_DIR$/task2-4/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="81">
+          <caret line="3" column="82" lean-forward="false" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/js/identity-allocation.js">
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/game.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="274">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/judge.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="74" column="15" lean-forward="false" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="9914" column="4" lean-forward="false" selection-start-line="9914" selection-start-column="4" selection-end-line="9914" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/gameover.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task2-4/js/player-allocation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/js/judge.js">
+    <entry file="file://$PROJECT_DIR$/task2-4/identity-allocation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/player-allocation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/js/identity-allocation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="55" lean-forward="true" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/js/gameOver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2-4/js/game.js">
+    <entry file="file://$PROJECT_DIR$/task2-4/judge-diary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="2700">
+          <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/judge-diary.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/identity-allocation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2-4/scss/pages/player-allocation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
           <folding />
         </state>
       </provider>

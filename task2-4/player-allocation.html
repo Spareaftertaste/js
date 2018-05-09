@@ -17,18 +17,18 @@
         <div class="main-title">玩家配比</div>
         <div class="main-content">
             <div class="player-box">
-                <div class="killer">杀手：<span id="killer"></span></div>
-                <div class="civilian">平民：<span id="civilian"></span></div>
+                <div class="killer">杀手：<span class="killerNum"></span></div>
+                <div class="civilian">平民：<span class="civilianNum"></span></div>
             </div>
-            <button id="setNumber">点击设置&#9784</button>
+            <button class="setNumber">点击设置&#9784</button>
         </div>
     </div>
     <div class="key-word">
         <label>
-            <input class="player-target"  id="killerTarget" type="text" placeholder="杀手词组">
+            <input class="killer-target"  type="text" placeholder="杀手词组">
         </label>
         <label>
-            <input class="player-target"  id="civilianTarget" type="text" placeholder="平民词组">
+            <input class="civilian-target" type="text" placeholder="平民词组">
         </label>
     </div>
     <div class="player-number">
@@ -44,6 +44,7 @@
     </div>
     <button id="licensing">去发牌</button>
 </main>
+<script type="text/javascript" src="../jquery-3.3.1/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/player-allocation.js"></script>
 </body>
 </html>

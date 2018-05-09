@@ -171,9 +171,9 @@ section {
   background-color: #fff;
   color: #fbb435; }
 
-.ariticle {
+.article {
   position: relative;
-  padding: 0 .4rem;
+  padding: .1rem .4rem;
   color: #787878;
   border: 1px #c9c9c9 solid;
   border-top: none;
