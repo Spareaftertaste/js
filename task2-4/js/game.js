@@ -19,7 +19,7 @@ close.click(function(){
 });
 window.onload=function () {
     console.log("date:"+ date);
-    if(date === 1 && step === "vote"){
+    if(date === 1 && step === "none"){
         deathNote = deathNote +",";
     }
     console.log("date: "+date);
@@ -28,7 +28,7 @@ window.onload=function () {
     }
     console.log("deathNote:"+deathNote);
     console.log(step);
-    if(step ==="vote"){
+    if(step ==="none"){
         $("#headTitle").text("投票");
         $("#navTitle").text("讨论结束，请大家开始投票");
         $("#mainTitle").text("点击票数最多人的头像");
@@ -81,12 +81,15 @@ start.click(function () {
             return false;
         }
     }
-    switch ($("#headTitle").text()){//根据头部标签内容，处决玩家的过程发生改变
-        case "杀手杀人" :
+    switch (step){//根据头部标签内容，处决玩家的过程发生改变
+        case "vote" :
+        case null:
+
             if( select === 0){
                 if(confirm("杀手是否放弃杀人")){//当没有玩家被选中时询问杀手是否放弃杀人
                     deathNote = deathNote + "none";
                     sessionStorage.setItem("deadMan",deathNote);
+                    sessionStorage.setItem("step","murder");
                     window.location.href = 'judge.html';
                 }
             }else {
@@ -98,6 +101,7 @@ start.click(function () {
                         console.log("index: "+index);
                         deathNote = deathNote + index;
                         console.log("deathNote: "+deathNote);
+                        sessionStorage.setItem("step","murder");
 
                         civilianNum--;
                         sessionStorage.setItem("deadMan",deathNote);
@@ -112,7 +116,7 @@ start.click(function () {
                 }
             }
             break;
-        case "投票":
+        case "none":
             if( select === 0){
                 alert("请选择一名玩家并将其拉出去斩了")
             }else {
@@ -125,6 +129,7 @@ start.click(function () {
                         killerNum--;
                         sessionStorage.setItem("deadMan", deathNote);
                         sessionStorage.setItem("killer", killerNum);
+                        sessionStorage.setItem("step","vote");
                         if (killerNum >= civilianNum) {
                             alert("游戏结束杀手获胜");
                             window.location.href = 'gameover.html';
@@ -146,6 +151,7 @@ start.click(function () {
                         civilianNum--;
                         sessionStorage.setItem("deadMan", deathNote);
                         sessionStorage.setItem("civilian", civilianNum);
+                        sessionStorage.setItem("step","vote");
                         if (killerNum >= civilianNum) {
                             alert("游戏结束杀手获胜");
                             window.location.href = 'gameover.html';
@@ -166,3 +172,15 @@ start.click(function () {
 //         return false;
 //     }
 // }
+jQuery(document).ready(function () {
+    if (window.history && window.history.pushState) {
+        $(window).on('popstate', function () {
+            /// 当点击浏览器的 后退和前进按钮 时才会被触发，
+            window.history.pushState('forward', null, '');
+            window.history.forward(1);
+        });
+    }
+    //
+    window.history.pushState('forward', null, '');  //在IE中必须得有这两行
+    window.history.forward(1);
+});

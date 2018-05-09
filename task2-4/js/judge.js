@@ -36,7 +36,6 @@ var game = {
         switch (game.state) {
             case null :
             case "vote":
-                sessionStorage.setItem("step","murder");
                 location.href = "game.html";
                 break;
             case "murder" :
@@ -61,7 +60,7 @@ var game = {
             case "murder" :
                 alert("请死者亮明身份并发表遗言");
                 game.state = "speak" ;
-                sessionStorage.setItem("step",game.state);
+                sessionStorage.setItem("step","speak");
                 lastWord.css("background-color","#83b09a");
                 $(".lastWord .triangle").css("background-color","#83b09a");
                 break;
@@ -80,7 +79,7 @@ var game = {
             case "speak":
                 alert("请玩家依次发言讨论");
                 game.state = "none";
-                sessionStorage.setItem("step",game.state);
+                sessionStorage.setItem("step","none");
                 speak.css("background-color","#83b09a");
                 $(".speak .triangle").css("background-color","#83b09a");
                 break;
@@ -95,8 +94,7 @@ var game = {
                 alert("请按照游戏步骤进行");
                 break;
             case "none":
-                game.state = "vote";
-                sessionStorage.setItem("step",game.state);
+
                 location.href = "game.html";
                 break;
         }
@@ -209,4 +207,16 @@ $(document).ready(function(){
             }
         }
     }
+});
+jQuery(document).ready(function () {
+    if (window.history && window.history.pushState) {
+        $(window).on('popstate', function () {
+            /// 当点击浏览器的 后退和前进按钮 时才会被触发，
+            window.history.pushState('forward', null, '');
+            window.history.forward(1);
+        });
+    }
+    //
+    window.history.pushState('forward', null, '');  //在IE中必须得有这两行
+    window.history.forward(1);
 });
