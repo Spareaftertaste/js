@@ -1,0 +1,37 @@
+<div class="wall">
+    <div class="login" ng-controller="loginCtrl" >
+        <div>
+            <img class="title" src="img/title.png" alt="#">
+        </div>
+        <form>
+            <div class="form-group">
+                <!--<label for="userName">Your Name</label>-->
+                <input type="text" class="form-control" id="userName" placeholder="Your Name"  ng-model="name" >
+                <div>
+                    <span class="tooltip-text" ng-show="enterName = !name">enter one user name</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <!--<label for="password">Password</label>-->
+                <input type="password" class="form-control" id="password" placeholder="Password" ng-model="passWord">
+                <div>
+                    <span class="tooltip-text" ng-show="enterPassword = !passWord">Please input a password</span>
+                </div>
+                <div>
+                    <span class="tooltip-text" ng-show="loginFaild" >Please enter the correct username and password</span>
+                </div>
+            </div>
+        </form>
+        <input type="submit" class="btn btn-default login-btn" value="login" ng-click="login()" ng-disabled ="!name && !passWord" >
+        <!--<div>-->
+            <!--<input class="username" type="text" placeholder="用户名" ng-model="name">-->
+
+        <!--</div>-->
+        <!--<div>-->
+            <!--<input class="password" type="password" placeholder="请输入密码" ng-model="passWord">-->
+
+        <!--</div>-->
+        <!--<div class="login-btn" ng-click="login()"></div>-->
+        <!--<a class="fp" href="https://www.baidu.com/"></a>-->
+    </div>
+</div>

@@ -1,0 +1,175 @@
+@import "../components/reset";
+
+html {
+  height: 100%;
+}
+body{
+  background-color: #999;
+}
+.row{
+  padding: 0;
+  margin: 0 !important;
+  width: 100%;
+}
+.col-md-4,
+.col-md-8{
+  padding: 0 !important;
+}
+.view{
+  padding: .3rem;
+  background-color: #f9f9f9;
+}
+.wall{
+  height: 100vh;
+  width: 100vw;
+  background: url("../../img/zelda.png");
+  background-size: cover;
+}
+.login{
+  position: absolute;
+  left: 50%;
+  transform: translate( -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    margin: .15rem 0;
+    input{
+      opacity:0.8;
+    }
+  }
+}
+.title{
+  margin-top: 15vh;
+  max-width: 2rem;
+  max-height: 1rem;
+}
+.login-btn{
+  opacity:0.8;
+}
+
+.tooltip-text{
+  color: red;
+  opacity: 0.8;
+
+}
+//以上是登陆页面的样式
+.side-nav-title{
+  padding-left: .2rem;
+  margin: 0;
+  height: .7rem;
+  line-height: .7rem;
+  width: 100%;
+  font-size: .2rem;
+  background-color: #ffa600;
+  border-bottom: #29bde0 solid;
+}
+.side-nav-menu{
+  display: flex;
+  justify-content: space-between;
+  background-color: palevioletred;
+  span{
+    padding: .15rem;
+  }
+}
+.nav-list{
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  background-color: greenyellow;
+  display: block;
+  color: #0f0f0f;
+}
+
+.title-right{
+  //padding:  0 .2rem;
+  height: .7rem;
+
+  line-height: .7rem;
+  font-size: .16rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fff;
+}
+.sign-out {
+  padding: 0 .2rem;
+  height: .7rem;
+  line-height: .7rem;
+  color: orange;
+}
+.sign-out:hover{
+  background-color: #999;
+}
+.user-name{
+  padding: 0 .2rem;
+  height: .7rem;
+  line-height: .7rem;
+}
+.user-name:hover{
+  background-color: #999;
+}
+.line{
+  width: 0;
+  margin: .25rem .1rem;
+  border: #999 solid;
+}
+//以上是后台nav 还有title样式
+
+.article-wall{
+  background-color: #999;
+
+}
+.article-list-table{
+  text-align: center;
+  border: #f9f9f9 solid;
+}
+.form-title{
+  padding: .1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: coral;
+}
+.table-responsive{
+  padding: .1rem;
+  background-color: #fff;
+}
+.btn-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  button{
+    margin: 0 .05rem;
+    height: .4rem;
+  }
+  div{
+    button{
+      margin: 0 .05rem;
+      height: .4rem;
+    }
+  }
+}
+.btn-list-size,
+.btn-list-page{
+  display: flex;
+  span{
+    height: .4rem;
+    line-height: .4rem;
+    vertical-align: center;
+  }
+}
+.article-list-footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.number-input{
+  text-align: center;
+  width: .5rem;
+  height: .4rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}

@@ -1,42 +1,63 @@
 
 
-$(function(){
-	$('.login').click(function(){
-		var username = $(".username").val(),
-            password = $(".password").val(),
-            ajax = null;
-    if(window.XMLHttpRequest) {//兼容ie
-    	ajax = new XMLHttpRequest();
-    	} else {
-		ajax = new window.ActiveXObject("Microsoft.XMLHTTP");
-	    }
-	$.ajax({
-        type:"post",//请求的方式
-        url:"/carrots-admin-ajax/a/login",//请求的url地址
-        dataType:"JSON",//返回格式为json
-        data:{//参数值
-            "name":username,
-            "pwd":password
-        },
-        async:true,//请求是否异步，默认为异步，这也是ajax重要特性
-        beforeSend:function(){
-            //请求前的处理
-        },
-        success:function(a){//请求成功时的处理
-            if(a.message === "success"){
-                alert("登录成功");
-            } else {
-                $(".alert").text(a.message);
-            }
-        },
-        complete:function(){
-            //请求完成的处理
-        },
-        error:function() {
-            //请求出错处理
-        }
-        });
-	})
+
+angular.module('myApp', ['ui.router']);
+
+<div ng-controller="DemoController">
+    <div ui-view></div>
+</div>
+
+    .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('start', {
+            url: '/start',
+            templateUrl: 'partials/start.html'
+        })
 });
 
+$stateProvider.state('home', {
+    template: '<h1>Hello {{ name }}</h1>'
+});
 
+$stateProvider
+    .state('inbox', {
+        url: '/inbox/:inboxId',
+        template: '<div><h1>Welcome to your inbox</h1>\
+                <a ui-sref="inbox.priority">Show priority</a>\
+                <div ui-view></div>\
+                </div>',
+        controller: function($scope, $stateParams) {
+            $scope.inboxId = $stateParams.inboxId;
+        }
+    })
+    .state('inbox.priority', {
+        url: '/priority
+        template: '<h2>Your priority inbox</h2>'
+    });
+
+<div>
+    <div ui-view="filters"></div>
+    <div ui-view="mailbox"></div>
+    <div ui-view="priority"></div>
+</div>
+
+$stateProvider
+    .state('inbox', {
+        views: {
+            'filters': {
+                template: '<h4>Filter inbox</h4>',
+                controller: function($scope) {}
+            },
+            'mailbox': {
+                templateUrl: 'partials/mailbox.html'
+            },
+            'priority': {
+                template: '<h4>Priority inbox</h4>',
+                resolve: {
+                    facebook: function() {
+                        return FB.messages();
+                    }
+                }
+            }
+        }
+    });

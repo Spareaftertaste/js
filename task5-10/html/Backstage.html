@@ -1,0 +1,63 @@
+<div class="row " ng-controller="backStageCtrl">
+    <div class="col-xs-12 col-md-4 ">
+        <div class="side-nav-title">萝卜萝卜后台管理系统</div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class=" title-right">
+            <span class="sign-out glyphicon glyphicon-off"></span>
+            <span class="line"></span>
+            <span class="user-name">admin</span>
+            <span class="line"></span>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12"  >
+        <div class="side-nav">
+            <div>
+                <div ng-click="list1 = !list1" class="side-nav-menu" >
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    <span>信息管理</span>
+                    <span class="triangle"></span>
+                </div>
+                <div ng-show="list1">
+                    <a class="nav-list" href="#/backstage/company" ui-sref = ".company">公司列表</a>
+                    <a class="nav-list" href="#/backstage/job" ui-sref = ".job">职位列表</a>
+                </div>
+            </div>
+            <div>
+                <div ng-click="list2 = !list2" class="side-nav-menu">
+
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    <span>内容管理</span>
+                    <span class="triangle"></span>
+                </div>
+                <div ng-show="list2" >
+                    <a class="nav-list" href="#/backstage/articleList" ui-sref = ".articleList" >文章管理</a>
+
+                </div>
+
+            </div>
+            <div>
+                <div ng-click="list3 = !list3" class="side-nav-menu">
+
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    <span>后台管理</span>
+                    <span class="triangle"></span>
+                </div>
+                <div ng-show="list3" >
+                    <a class="nav-list" href="" ui-sref = "" >账号管理</a>
+                    <a class="nav-list">角色管理</a>
+                    <a class="nav-list">修改密码</a>
+                    <a class="nav-list">模块管理</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-xs-12" >
+        <div ui-view class="view">
+            <h1>
+                welcome
+            </h1>
+        </div>
+    </div>
+</div>

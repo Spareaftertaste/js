@@ -1,0 +1,87 @@
+<div class="article-wall" ng-controller="articleListCtrl">
+    <div class="row">
+        <div class="col-md-9 col-xs-12">
+            <label for="startDate"><strong>发布时间</strong></label>
+            <input type="date" id="startDate" ng-model="a2a2">
+            <label>{{a2a2}}</label>
+            <input type="date" >
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <label><strong>类型</strong></label>
+            <select class="form-control">
+                <option>全部</option>
+                <option>首页banner</option>
+                <option>找职位banner</option>
+                <option>找精英banner</option>
+                <option>行业大图</option>
+            </select>
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <label><strong>状态</strong></label>
+            <select class="form-control">
+                <option>全部</option>
+                <option>上线</option>
+                <option>草稿</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="form-title">
+        <div><strong>Article列表</strong></div>
+        <button class="btn btn-success">新增</button>
+    </div>
+    <div class="table-responsive">
+        <table id="tb" class="table table-striped table-hover table-responsive table-condensed table-bordered article-list-table">
+            <tr>
+                <td><strong>ID</strong></td>
+                <td><strong>名称</strong></td>
+                <td><strong>类型</strong></td>
+                <td><strong>发布时间</strong></td>
+                <td><strong>修改时间</strong></td>
+                <td><strong>发布者</strong></td>
+                <td><strong>状态</strong></td>
+                <td><strong>操作</strong></td>
+            </tr>
+            <tr ng-repeat="x in articleList">
+                <td>{{$index+1}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.type | type}}</td>
+                <td>{{x.createAt | date:'yyyy-MM-dd HH:mm'}}</td>
+                <td>{{x.updateAt | date:'yyyy-MM-dd HH:mm'}}</td>
+                <td>{{x.author}}</td>
+                <td>{{x.status | status}}</td>
+                <td>
+                    <button class="btn btn-default">下线</button>
+                    <button class="btn btn-info">编辑</button>
+                    <button class=" btn btn-danger">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="article-list-footer">
+        <div>
+            <div class="btn-list-size">
+                <span>每页显示</span>
+                <input type="number" class="form-control number-input small" ng-model="size">
+                <span>条</span>
+            </div>
+        </div>
+        <div class="btn-list" >
+            <button class="btn btn-default" ng-click="pageChange(size,1)" >首页</button>
+            <div ng-repeat="a in btnList" >
+                <button class="btn btn-default" ng-click="pageChange(size,a)">{{a}}</button>
+            </div>
+            <button class="btn btn-default" ng-click="pageChange(size,btnList.length)">尾页</button>
+        </div>
+        <div class="btn-list-page">
+            <span>去第</span>
+            <input type="number" class="form-control number-input small" ng-model="goToPage">
+            <span>页</span>
+            <button class="btn btn-default" ng-click="pageSizeChange(size,goToPage)" >确定</button>
+        </div>
+    </div>
+    <!--<ul ng-repeat=" a in articleList">-->
+        <!--<li>{{a}}</li>-->
+    <!--</ul>-->
+    <!--<div ng-model="articleList"></div>-->
+</div>
