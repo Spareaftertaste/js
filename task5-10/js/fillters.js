@@ -25,3 +25,38 @@ app.filter('status', function() { //可以注入依赖
         }
     }
 });
+
+app.filter('typeFilter',function(){
+    return function (a){
+        switch (a){
+            case "首页Banner":
+                a =  0;
+                break;
+            case "找职位Banner":
+                a = 1;
+                break;
+            case "行业大图":
+                a = 3;
+                break;
+            case "找精英Banner":
+                a = 2;
+                break;
+        }
+        return a;
+    }
+});
+
+app.filter('statusFilter',function(){
+    return function (a){
+        switch (a){
+            case "草稿":
+                a = 1;
+                break;
+            case "上线":
+                a = 2;
+                break;
+
+        }
+        return a;
+    }
+});

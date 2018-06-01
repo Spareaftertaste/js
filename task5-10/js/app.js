@@ -1,5 +1,5 @@
 
-var app = angular.module("backStage",["ui.router","ngAnimate","ngTouch","ui.bootstrap"]);
+var app = angular.module("backStage",["ui.router","ui.bootstrap",'ng.ueditor']);
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/login");
     $stateProvider
@@ -26,26 +26,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'html/article-list.html',
             controller: 'articleListCtrl'
         })
-
-
-
-        // .when("/",{
-        //     templateUrl: 'html/login.html',
-        //     controller: 'loginCtrl'
-        // })
-        // .when("/backstage",{
-        //     templateUrl: 'html/Backstage.html',
-        //     controller: 'backStageCtrl'
-        // })
-        // .when("/articleList",{
-        //     templateUrl: 'html/article-list.html',
-        //     controller: 'articleListCtrl'
-        // })
-        // .when("/article",{
-        //     templateUrl: 'html/article.html',
-        //     controller: 'articleCtrl'
-        // })
-        // .otherwise({
-        //     redirectTo:''
-        // });
+        .state('backstage.newArticle',{
+            url:"/newArticle?id",
+            templateUrl: 'html/newarticle.html',
+            controller: 'newArticleCtrl'
+        })
 });

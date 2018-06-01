@@ -1,8 +1,8 @@
 @import "../components/reset";
 
-html {
-  height: 100%;
-}
+//html {
+//  height: 100%;
+//}
 body{
   background-color: #999;
 }
@@ -172,4 +172,45 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none !important;
   margin: 0;
+}
+
+.title-btn-list{
+  padding: .1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  button{
+    margin: 0 .1rem;
+  }
+
+}
+
+//以上是列表页面样式
+.new-article{
+  border: 2px solid #29b078;
+}
+.new-article-title{
+  padding: .1rem;
+  border-bottom: 2px solid #29b078;
+}
+.new-article-content {
+  padding: .1rem 0;
+}
+.img-input{
+  position: relative;
+  max-width: 2rem;
+  max-height: 2rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  text-align: center;
+  border: dashed #999 2px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%,-50%);
+  }
 }
