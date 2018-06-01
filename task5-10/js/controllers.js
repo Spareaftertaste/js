@@ -161,7 +161,7 @@ app.controller("newArticleCtrl",function ($scope,$http) {
     $scope.onload = false;
     $scope.imgUpload = function(files) {
         $scope.reader.readAsDataURL(files[0]);  //FileReader的方法，把图片转成base64
-        $scope.reader.onload = function (ev) {
+        $scope.reader.onload = function () {
             $scope.$apply(function () {
                 $scope.img = files[0];
                 $scope.imgSize = files[0].size > 1024 * 1024 ? (files[0].size / 1024 / 1024).toFixed(2) + 'MB' : (files[0].size / 1024).toFixed(2) + 'KB';
@@ -212,6 +212,8 @@ app.controller("newArticleCtrl",function ($scope,$http) {
             alert("请选择职业");
             return false
         }else {
+
+
 
         }
     };
