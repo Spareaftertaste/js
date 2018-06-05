@@ -96,9 +96,9 @@ app.controller("articleListCtrl",function ($scope,$state,$stateParams,searchArti
     //获取url中的参数
     $scope.articleList = null;
     console.log($stateParams);
-    // if($stateParams.page !== undefined){
-    //     $scope.page = parseInt($stateParams.page);
-    // }
+    if($stateParams.page !== undefined){
+        $scope.page = parseInt($stateParams.page);
+    }
     if($stateParams.size !== undefined){
         $scope.size = parseInt($stateParams.size);
     }

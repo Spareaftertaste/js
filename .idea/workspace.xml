@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c58b7e48-c910-4463-8a30-802578cdb553" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/task5-10/html/Backstage.html" afterPath="$PROJECT_DIR$/task5-10/html/Backstage.html" />
-      <change beforePath="$PROJECT_DIR$/task5-10/html/article-list.html" afterPath="$PROJECT_DIR$/task5-10/html/article-list.html" />
-      <change beforePath="$PROJECT_DIR$/task5-10/html/login.html" afterPath="$PROJECT_DIR$/task5-10/html/login.html" />
-      <change beforePath="$PROJECT_DIR$/task5-10/html/newarticle.html" afterPath="$PROJECT_DIR$/task5-10/html/newarticle.html" />
-      <change beforePath="$PROJECT_DIR$/task5-10/index.html" afterPath="$PROJECT_DIR$/task5-10/index.html" />
-      <change beforePath="$PROJECT_DIR$/task5-10/js/app.js" afterPath="$PROJECT_DIR$/task5-10/js/app.js" />
       <change beforePath="$PROJECT_DIR$/task5-10/js/controllers.js" afterPath="$PROJECT_DIR$/task5-10/js/controllers.js" />
-      <change beforePath="$PROJECT_DIR$/task5-10/js/directives.js" afterPath="$PROJECT_DIR$/task5-10/js/directives.js" />
-      <change beforePath="$PROJECT_DIR$/task5-10/js/fillters.js" afterPath="$PROJECT_DIR$/task5-10/js/fillters.js" />
-      <change beforePath="$PROJECT_DIR$/task5-10/js/services.js" afterPath="$PROJECT_DIR$/task5-10/js/services.js" />
-      <change beforePath="$PROJECT_DIR$/task5-10/scss/pages/index.css" afterPath="$PROJECT_DIR$/task5-10/scss/pages/index.css" />
-      <change beforePath="$PROJECT_DIR$/task5-10/scss/pages/index.css.map" afterPath="$PROJECT_DIR$/task5-10/scss/pages/index.css.map" />
-      <change beforePath="$PROJECT_DIR$/task5-10/scss/pages/index.scss" afterPath="$PROJECT_DIR$/task5-10/scss/pages/index.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,8 +50,8 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task5-10/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="79" column="36" lean-forward="true" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+            <state relative-caret-position="216">
+              <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="100" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -405,7 +393,7 @@
       <workItem from="1528083545174" duration="597000" />
       <workItem from="1528087463494" duration="24383000" />
       <workItem from="1528162169670" duration="4678000" />
-      <workItem from="1528167067320" duration="349000" />
+      <workItem from="1528167067320" duration="494000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <created>1523109506638</created>
@@ -554,11 +542,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527857185045</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="yahah">
+      <created>1528167418433</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1528167418433</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="711549000" />
+    <option name="totallyTimeSpent" value="711694000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -934,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task5-10/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="79" column="36" lean-forward="true" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        <state relative-caret-position="216">
+          <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="100" selection-end-column="5" />
           <folding />
         </state>
       </provider>
