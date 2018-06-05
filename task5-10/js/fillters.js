@@ -50,10 +50,10 @@ app.filter('statusFilter',function(){
     return function (a){
         switch (a){
             case "草稿":
-                a = 1;
+                a = "上线";
                 break;
             case "上线":
-                a = 2;
+                a = "下线";
                 break;
 
         }

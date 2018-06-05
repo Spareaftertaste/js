@@ -5,7 +5,7 @@
             <input type="text"
                    class="form-control date-input"
                    uib-datepicker-popup="{{startDate}}"
-                   ng-model="dat1 "
+                   ng-model="startAt"
                    is-open="popup1.opened"
                    ng-required="true"
                    close-text="关闭"
@@ -13,14 +13,14 @@
                    current-text="今天"
                    alt-input-formats="altInputFormats"
                    ng-click="open1()"
-                   datepicker-options="{maxDate:dt2}"
+                   datepicker-options="{maxDate:dat2}"
                    required="required"
             >
             <label>--</label>
             <input type="text"
                    class="form-control date-input"
                    uib-datepicker-popup="{{endDate}}"
-                   ng-model="dat2"
+                   ng-model="endAt"
                    is-open="popup2.opened"
                    ng-required="true"
                    close-text="关闭"
@@ -28,32 +28,31 @@
                    current-text="今天"
                    alt-input-formats="altInputFormats"
                    ng-click="open2()"
-                   datepicker-options="{minDate:dt1}"
+                   datepicker-options="{minDate:dat1,maxDate:today}"
                    required="required"
             >
         </div>
         <div class="col-md-3 col-xs-12">
             <label><strong>类型</strong></label>
             <select class="form-control" ng-model ="type">
-                <option>全部</option>
-                <option>首页Banner</option>
-                <option>找职位Banner</option>
-                <option>找精英Banner</option>
-                <option>行业大图</option>
+                <option value="9">全部</option>
+                <option value="0">首页Banner</option>
+                <option value="1">找职位Banner</option>
+                <option value="2">找精英Banner</option>
+                <option value="3">行业大图</option>
             </select>
         </div>
         <div class="col-md-3 col-xs-12">
             <label><strong>状态</strong></label>
             <select class="form-control" ng-model = "status">
-                <option>全部</option>
-                <option>上线</option>
-                <option>草稿</option>
+                <option value="0">全部</option>
+                <option value="2">上线</option>
+                <option value="1">草稿</option>
             </select>
         </div>
         <div class="title-btn-list col-xs-12">
-            <button class="btn btn-danger" ng-click="clear(dat1,dat2,type,status,size)">清空</button>
-            <button class="btn btn-success"
-                    ng-click = "search(dat1,dat2,type,status,size)">确认</button>
+            <button class="btn btn-danger" ng-click="delete()">清空</button>
+            <button class="btn btn-success" ng-click="search()">确认</button>
         </div>
     </div>
     <div class="form-title">
@@ -81,33 +80,51 @@
                 <td>{{x.author}}</td>
                 <td>{{x.status | status}}</td>
                 <td>
-                    <button class="btn btn-default">下线</button>
-                    <button class="btn btn-info">编辑</button>
-                    <button class=" btn btn-danger">删除</button>
+                    <button class="btn btn-default" ng-click="exitArticle(x.id,x.status)">{{x.status | status | statusFilter }}</button>
+                    <button class="btn btn-info" ng-click="editArticle(x.id)">编辑</button>
+                    <button class=" btn btn-danger" ng-click="deleteArticle(x.id)">删除</button>
                 </td>
             </tr>
         </table>
     </div>
     <div class="article-list-footer">
         <div>
-            <div class="btn-list-size">
+            <div class="btn-list-size ">
                 <span>每页显示</span>
                 <input type="number" class="form-control number-input small" ng-model="size">
                 <span>条</span>
             </div>
-        </div>
-        <div class="btn-list" >
-            <button class="btn btn-default" ng-click="pageChange(size,1)" >首页</button>
-            <div ng-repeat="a in btnList" >
-                <button class="btn btn-default" ng-click="pageChange(size,a)">{{a}}</button>
+            <div    class="apage"
+                    uib-pagination
+                    total-items="totalItems"
+                    ng-model="page"
+                    max-size="5"
+                    items-per-page = "size"
+                    first-text="第一页"
+                    previous-text = "<"
+                    next-text = ">"
+                    ng-change = "search()"
+                    rotate = "true"
+                    force-ellipses = "true"
+                    last-text="最后页"
+                    boundary-links="true"
+                    boundary-link-numbers="true">
             </div>
-            <button class="btn btn-default" ng-click="pageChange(size,btnList.length)">尾页</button>
+            <div class="btn-list-page">
+                <span>去第</span>
+                <input type="number" class="form-control number-input small" ng-model="page">
+                <span>页</span>
+                <button class="btn btn-default" ng-click="search()" >确定</button>
+            </div>
+
         </div>
-        <div class="btn-list-page">
-            <span>去第</span>
-            <input type="number" class="form-control number-input small" ng-model="goToPage">
-            <span>页</span>
-            <button class="btn btn-default" ng-click="pageSizeChange(size,goToPage)" >确定</button>
-        </div>
+        <!--<div class="btn-list" >-->
+            <!--<button class="btn btn-default" ng-click="pageChange(size,1)" >首页</button>-->
+            <!--<div ng-repeat="a in btnList" >-->
+                <!--<button class="btn btn-default" ng-click="pageChange(size,a)">{{a}}</button>-->
+            <!--</div>-->
+            <!--<button class="btn btn-default" ng-click="pageChange(size,btnList.length)">尾页</button>-->
+        <!--</div>-->
+
     </div>
 </div>

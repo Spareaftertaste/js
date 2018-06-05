@@ -15,7 +15,8 @@ body {
   outline: none; }
 
 body {
-  background-color: #999; }
+  background: url("../../img/zelda.png");
+  background-size: cover; }
 
 .row {
   padding: 0;
@@ -27,6 +28,7 @@ body {
   padding: 0 !important; }
 
 .view {
+  min-height: 89vh;
   padding: .3rem;
   background-color: #f9f9f9; }
 
@@ -66,24 +68,37 @@ body {
   height: .7rem;
   line-height: .7rem;
   width: 100%;
-  font-size: .2rem;
-  background-color: #ffa600;
-  border-bottom: #29bde0 solid; }
+  color: #29b078;
+  font-weight: 10;
+  font-size: .3rem; }
 
 .side-nav-menu {
   display: flex;
   justify-content: space-between;
-  background-color: palevioletred; }
+  color: #29b078;
+  font-weight: bolder; }
   .side-nav-menu span {
     padding: .15rem; }
+
+.side-nav-menu:hover {
+  background-color: rgba(131, 114, 114, 0.5); }
 
 .nav-list {
   height: .4rem;
   line-height: .4rem;
   text-align: center;
-  background-color: greenyellow;
   display: block;
   color: #0f0f0f; }
+
+.nav-list:hover {
+  background-color: rgba(131, 114, 114, 0.5);
+  text-decoration: none;
+  color: pink; }
+
+.active {
+  background-color: rgba(131, 114, 114, 0.5);
+  text-decoration: none !important;
+  color: pink !important; }
 
 .title-right {
   height: .7rem;
@@ -115,12 +130,11 @@ body {
   margin: .25rem .1rem;
   border: #999 solid; }
 
-.article-wall {
-  background-color: #999; }
-
 .article-list-table {
   text-align: center;
   border: #f9f9f9 solid; }
+  .article-list-table tr td {
+    padding-top: .1rem; }
 
 .form-title {
   padding: .1rem;
@@ -194,12 +208,17 @@ input::-webkit-inner-spin-button {
   text-align: center;
   border: dashed #999 2px; }
   .img-input img {
-    width: 100%;
-    height: 100%; }
+    max-width: 2rem;
+    max-height: 2rem; }
   .img-input span {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
+
+.apage {
+  margin: 0; }
+  .apage a {
+    margin: 0 .1rem; }
 
 /*# sourceMappingURL=index.css.map */

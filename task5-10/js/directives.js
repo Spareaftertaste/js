@@ -1,26 +1,20 @@
-
-$http({
-    method: "GET",
-    url: "data.json",
-    eventHandlers: {
-        progress: function(event) {
-            console.log("progress");
-            console.log(event);
+app.animation('.fad', function () {
+    return {
+        enter: function(element, done) {
+            element.css({
+                opacity: 0
+            });
+            element.animate({
+                opacity: 1
+            }, 1000, done);
         },
-        readystatechange: function(event) {
-            console.log("change");
-            console.log(event);
+        leave: function (element, done) {
+            element.css({
+                opacity: 1
+            });
+            element.animate({
+                opacity: 0
+            }, 1000, done);
         }
-    },
-    uploadEventHandlers: {
-        progress: function(object) {
-            console.log(object);
-        }
-    }
-})
-    .success(function(json) { // succès
-        $scope.lemmes = json;
-        //console.log($http);
-    }).error(function(error) { // erreur
-    console.log(error);
+    };
 });

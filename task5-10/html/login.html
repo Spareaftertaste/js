@@ -3,17 +3,17 @@
         <div>
             <img class="title" src="img/title.png" alt="#">
         </div>
-        <form>
+        <form name = "loginForm">
             <div class="form-group">
                 <!--<label for="userName">Your Name</label>-->
-                <input type="text" class="form-control" id="userName" placeholder="Your Name"  ng-model="name" >
+                <input type="text" class="form-control" id="userName" placeholder="Your Name"  ng-model="name" required>
                 <div>
                     <span class="tooltip-text" ng-show="enterName = !name">enter one user name</span>
                 </div>
             </div>
             <div class="form-group">
                 <!--<label for="password">Password</label>-->
-                <input type="password" class="form-control" id="password" placeholder="Password" ng-model="passWord">
+                <input type="password" class="form-control" id="password" placeholder="Password" ng-model="passWord" required>
                 <div>
                     <span class="tooltip-text" ng-show="enterPassword = !passWord">Please input a password</span>
                 </div>
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </form>
-        <input type="submit" class="btn btn-default login-btn" value="login" ng-click="login()" ng-disabled ="!name && !passWord" >
+        <input type="submit" class="btn btn-default login-btn" value="login" ng-click="login()" ng-disabled ="loginForm.$invalid" >
         <!--<div>-->
             <!--<input class="username" type="text" placeholder="用户名" ng-model="name">-->
 

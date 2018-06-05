@@ -1,14 +1,14 @@
-<div ng-controller="newArticleCtrl" class="row new-article">
-    <div class="col-xs-12 new-article-title">新增Article</div>
+<form name = "myForm" ng-controller="newArticleCtrl" class="row new-article">
+    <div class="col-xs-12 new-article-title">{{formTitle}}</div>
     <div class="col-xs-12 new-article-content">
         <div class="col-sm-2 col-xs-12">标题名称</div>
         <div class="col-sm-10 col-xs-12">
-            <input class="form-control" type="text" required ng-model = "newTitle">
+            <input class="form-control" type="text" ng-model = "newTitle">
         </div>
         <div class="col-sm-2 col-xs-12">类型</div>
         <div class="col-sm-10 col-xs-12">
             <div class="col-xs-6">
-                <select class="form-control" required ng-model = "newType" >
+                <select class="form-control" required ng-model = "newType">
                     <option value="0">首页Banner</option>
                     <option value="1">找职位Banner</option>
                     <option value="2">找精英Banner</option>
@@ -16,7 +16,7 @@
                 </select>
             </div>
             <div class="col-xs-6">
-                <select class="form-control" ng-show = "newType == 3" ng-model = "newJob" required>
+                <select class="form-control" ng-show = "newType == 3" ng-model = "newJob">
                     <option value="0">移动互联网</option>
                     <option value="1" >电子商务</option>
                     <option value="2">企业服务</option>
@@ -26,8 +26,6 @@
                     <option value="6">游戏</option>
                 </select>
             </div>
-
-
         </div>
         <div class="col-sm-2 col-xs-12">说明</div>
         <div class="col-sm-10 col-xs-12">
@@ -35,14 +33,18 @@
         </div>
         <div class="col-sm-2 col-xs-12">转跳链接</div>
         <div class="col-sm-10 col-xs-12">
-            <input class="form-control" type="url" required ng-model="newUrl">
+            <input class="form-control" name = "url" type="url" required ng-model="url">
+            <span  style="color:red" ng-show="myForm.url.$dirty && myForm.url.$invalid">
+                <span ng-show="myForm.url.$error.required">链接是必须的。</span>
+                <span ng-show="myForm.url.$error.url">非法的链接地址。</span>
+            </span>
         </div>
         <div class="col-sm-2 col-xs-12">配图</div>
         <div class="col-sm-10 col-xs-12">
             <div>
                 <label for="upLoadImg" class="img-input">
                     <span ng-hide ="success === 'success'">点击添加图片</span>
-                    <img ng-src = "{{imgSrc}}" ng-show ="success === 'success'">
+                    <img ng-src = "{{imgSrc}}"  class="img-responsive" ng-show ="success === 'success'">
                 </label>
                 <input style="display:none;" id = "upLoadImg" type="file" accept="image/*" onchange="angular.element(this).scope().imgUpload(this.files)" ng-disabled="success === 'success'">
             </div>
@@ -66,8 +68,8 @@
                         </td>
                         <td><span ng-show ="success === 'success'" class="glyphicon glyphicon-ok-sign"></span></td>
                         <td>
-                            <button class="btn btn-default" ng-click = "upLoad()">上传</button>
-                            <button class="btn btn-info " ng-click = "delete()">删除</button>
+                            <button class="btn btn-default" ng-click = "upLoad()" ng-disabled="success === 'success'">上传</button>
+                            <button class="btn btn-info " ng-click = "delete()" >删除</button>
                         </td>
                     </tr>
                 </table>
@@ -77,15 +79,14 @@
         <div class="col-sm-10 col-xs-12">
             <div class="row">
                 <div class="col-xs-10">
-                    <button class="btn" ng-click="onLine()">立即上线</button>
-                    <button class="btn" ng-click="draft()">存为草稿</button>
-
+                    <button class="btn" ng-click="onLine()" ng-disabled="myForm.$invalid || !imgSrc || newType ==3 && !newJob || !newTitle">立即上线</button>
+                    <button class="btn" ng-click="draft()" ng-disabled="myForm.$invalid || !imgSrc || newType ==3 && !newJob">存为草稿</button>
+                    <div>{{!newTitle}}</div>
                 </div>
                 <div class="col-xs-2 ">
                     <a class="btn btn-danger" href="#/backstage/articleList" ui-sref="backstage.articleList">取消</a>
                 </div>
             </div>
         </div>
-
     </div>
-</div>
+</form>

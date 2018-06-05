@@ -1,5 +1,5 @@
 
-var app = angular.module("backStage",["ui.router","ui.bootstrap",'ng.ueditor']);
+var app = angular.module("backStage",["ngAnimate","ui.router","ui.bootstrap",'ng.ueditor']);
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/login");
     $stateProvider
@@ -22,7 +22,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             template: '<h1>Job</h1>'
         })
         .state('backstage.articleList',{
-            url:"/articleList",
+            url:"/articleList?dat1&dat2&type&status&size&page",
             templateUrl: 'html/article-list.html',
             controller: 'articleListCtrl'
         })
