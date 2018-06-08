@@ -1,11 +1,11 @@
-<div class="article-wall" ng-controller="articleListCtrl">
+<div class="article-wall">
     <div class="row">
         <div class="col-md-9 col-xs-12">
             <label><strong>发布时间</strong></label>
             <input type="text"
                    class="form-control date-input"
                    uib-datepicker-popup="{{startDate}}"
-                   ng-model="startAt"
+                   ng-model="dat1"
                    is-open="popup1.opened"
                    ng-required="true"
                    close-text="关闭"
@@ -20,7 +20,7 @@
             <input type="text"
                    class="form-control date-input"
                    uib-datepicker-popup="{{endDate}}"
-                   ng-model="endAt"
+                   ng-model="dat2"
                    is-open="popup2.opened"
                    ng-required="true"
                    close-text="关闭"
@@ -94,7 +94,7 @@
                 <input type="number" class="form-control number-input small" ng-model="size">
                 <span>条</span>
             </div>
-            <div    class="apage"
+            <ul    class="apage "
                     uib-pagination
                     total-items="totalItems"
                     ng-model="page"
@@ -103,28 +103,20 @@
                     first-text="第一页"
                     previous-text = "<"
                     next-text = ">"
-                    ng-change = "search()"
+                    ng-click="search()"
                     rotate = "true"
                     force-ellipses = "true"
                     last-text="最后页"
                     boundary-links="true"
                     boundary-link-numbers="true">
-            </div>
+            </ul>
             <div class="btn-list-page">
                 <span>去第</span>
-                <input type="number" class="form-control number-input small" ng-model="page">
+                <input type="number" class="form-control number-input small" ng-model="newPage">
                 <span>页</span>
                 <button class="btn btn-default" ng-click="search()" >确定</button>
             </div>
 
         </div>
-        <!--<div class="btn-list" >-->
-            <!--<button class="btn btn-default" ng-click="pageChange(size,1)" >首页</button>-->
-            <!--<div ng-repeat="a in btnList" >-->
-                <!--<button class="btn btn-default" ng-click="pageChange(size,a)">{{a}}</button>-->
-            <!--</div>-->
-            <!--<button class="btn btn-default" ng-click="pageChange(size,btnList.length)">尾页</button>-->
-        <!--</div>-->
-
     </div>
 </div>

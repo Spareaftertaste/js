@@ -230,6 +230,7 @@ input::-webkit-inner-spin-button {
   img{
     max-width: 2rem;
     max-height: 2rem;
+
   }
   span{
     position: absolute;
@@ -239,8 +240,12 @@ input::-webkit-inner-spin-button {
   }
 }
 .apage{
-  margin: 0;
+  margin: 0.1rem 0;
   a{
     margin: 0 .1rem;
   }
+}
+
+.pading{
+  margin: .1rem 0;
 }

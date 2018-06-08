@@ -1,0 +1,26 @@
+<table id="tb" class="table table-striped table-hover table-responsive table-condensed table-bordered article-list-table">
+    <tr>
+        <td><strong>ID</strong></td>
+        <td><strong>名称</strong></td>
+        <td><strong>类型</strong></td>
+        <td><strong>发布时间</strong></td>
+        <td><strong>修改时间</strong></td>
+        <td><strong>发布者</strong></td>
+        <td><strong>状态</strong></td>
+        <td><strong>操作</strong></td>
+    </tr>
+    <tr ng-repeat="x in articleList">
+        <td>{{$index+1}}</td>
+        <td>{{x.title}}</td>
+        <td>{{x.type | type}}</td>
+        <td>{{x.createAt | date:'yyyy-MM-dd HH:mm'}}</td>
+        <td>{{x.updateAt | date:'yyyy-MM-dd HH:mm'}}</td>
+        <td>{{x.author}}</td>
+        <td>{{x.status | status}}</td>
+        <td>
+            <button class="btn btn-default" ng-click="exitArticle(x.id,x.status)">{{x.status | status | statusFilter }}</button>
+            <button class="btn btn-info" ng-click="editArticle(x.id)">编辑</button>
+            <button class=" btn btn-danger" ng-click="deleteArticle(x.id)">删除</button>
+        </td>
+    </tr>
+</table>

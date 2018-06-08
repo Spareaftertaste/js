@@ -22,7 +22,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             template: '<h1>Job</h1>'
         })
         .state('backstage.articleList',{
-            url:"/articleList?dat1&dat2&type&status&size&page",
+            url:"/articleList?startAt&endAt&type&status&size&page",
             templateUrl: 'html/article-list.html',
             controller: 'articleListCtrl'
         })
